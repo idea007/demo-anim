@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.dafay.demo.anim.ui.act.MainActivity">
+
+    <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/img_0" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_image"
+            android:text="Hello World ! Hello World ! Hello World ! Hello World ! Hello World ! Hello World ! Hello World !" />
+
+    <Button
+            android:id="@+id/btn_click_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:text="toActivityB 包含状态栏"
+            android:textAllCaps="false" />
+
+    <Button
+            android:id="@+id/btn_click_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_click_one"
+            android:layout_margin="10dp"
+            android:text="toActivityB 不包含状态栏"
+            android:textAllCaps="false" />
+
+</RelativeLayout>

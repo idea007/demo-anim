@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+            android:id="@+id/btn_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击展开"></Button>
+
+    <Button
+            android:id="@+id/btn_unexpand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_expand"
+            android:text="点击收起"></Button>
+
+    <RelativeLayout
+            android:id="@+id/rl_test"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btn_unexpand"
+            android:background="#1000ff00">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1111111111"></TextView>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="22222222222"></TextView>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ff0000"></View>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

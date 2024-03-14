@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Transition
+            app:constraintSetStart="@layout/frg_motion_2_a"
+            app:constraintSetEnd="@layout/frg_motion_2_b"
+            app:duration="200">
+
+        <OnSwipe
+                app:dragDirection="dragUp"
+                app:touchAnchorId="@id/rv_recyclerview"
+                app:touchAnchorSide="top"/>
+
+
+        <!--<KeyFrameSet>-->
+            <!--<KeyAttribute-->
+                    <!--android:translationX="100dp"-->
+                    <!--app:framePosition="100"-->
+                    <!--app:motionTarget="@id/rl_two_title"/>-->
+
+        <!--</KeyFrameSet>-->
+
+
+    </Transition>
+
+</MotionScene>

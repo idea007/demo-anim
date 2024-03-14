@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.dafay.demo.anim.ui.act.MainActivity">
+
+
+    <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="#E012CD"
+            android:gravity="center"
+            android:text="text"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+        <LinearLayout
+                android:id="@+id/ll_button_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

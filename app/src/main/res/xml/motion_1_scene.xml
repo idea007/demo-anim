@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+            app:constraintSetStart="@layout/frg_motion_1_a"
+            app:constraintSetEnd="@layout/frg_motion_1_b"
+            app:duration="1000">
+
+        <OnSwipe
+                app:touchAnchorId="@id/fl_bottom_container"
+                app:touchAnchorSide="top"
+                app:dragDirection="dragUp"/>
+
+        <OnClick
+                app:targetId="@id/iv_img_0"
+                app:clickAction="toggle"/>
+
+
+    </Transition>
+
+</MotionScene>

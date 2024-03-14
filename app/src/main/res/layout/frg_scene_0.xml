@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dafay.demo.anim.ui.weight.MyRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.dafay.demo.anim.ui.act.MainActivity">
+
+
+    <com.dafay.demo.anim.ui.weight.MyTextView
+            android:id="@+id/tv_title"
+            android:layout_width="100dp" android:layout_height="100dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#1228E0"
+            android:foreground="@drawable/ripple_rect_color_40808080"
+    />
+
+
+    <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="点击开始 TRANSLATION_X 动画"/>
+
+
+    <Button
+            android:id="@+id/btn_start_changebounds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_start"
+            android:text="点击开始 ChangeBounds 动画"/>
+
+
+</com.dafay.demo.anim.ui.weight.MyRelativeLayout>

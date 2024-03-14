@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.dafay.demo.anim.ui.weight.RoundImageView
+            android:id="@+id/iv_img1"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/img_28"
+            app:radius="5dp">
+
+    </com.dafay.demo.anim.ui.weight.RoundImageView>
+
+
+    <com.dafay.demo.anim.ui.weight.RoundImageView
+            android:id="@+id/iv_img2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="340dp"
+            android:layout_marginRight="50dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/img_11"
+            app:radius="5dp" />
+
+
+</RelativeLayout>

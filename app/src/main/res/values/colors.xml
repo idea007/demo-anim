@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="black5">#0D000000</color>
+    <color name="black10">#1A000000</color>
+    <color name="black20">#33000000</color>
+    <color name="black30">#4D000000</color>
+    <color name="black40">#66000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black70">#B3000000</color>
+    <color name="black80">#CC000000</color>
+    <color name="black90">#E6000000</color>
+    <color name="black">#000000</color>
+
+
+    <color name="red10">#1AFF0000</color>
+    <color name="red20">#33FF0000</color>
+    <color name="red30">#4DFF0000</color>
+    <color name="red40">#66FF0000</color>
+    <color name="red50">#80FF0000</color>
+    <color name="red60">#99FF0000</color>
+    <color name="red70">#B3FF0000</color>
+    <color name="red80">#CCFF0000</color>
+    <color name="red90">#E6FF0000</color>
+    <color name="red">#FF0000</color>
+
+
+    <color name="blue5">#0d0000FF</color>
+    <color name="blue10">#1A0000FF</color>
+    <color name="blue15">#260000FF</color>
+    <color name="blue20">#330000FF</color>
+    <color name="blue30">#4D0000FF</color>
+    <color name="blue40">#660000FF</color>
+    <color name="blue50">#800000FF</color>
+    <color name="blue60">#990000FF</color>
+    <color name="blue70">#B30000FF</color>
+    <color name="blue80">#CC0000FF</color>
+    <color name="blue90">#E60000FF</color>
+    <color name="blue">#0000FF</color>
+
+
+    <color name="green10">#1A00FF00</color>
+    <color name="green20">#3300FF00</color>
+    <color name="green30">#4D00FF00</color>
+    <color name="green40">#6600FF00</color>
+    <color name="green50">#8000FF00</color>
+    <color name="green60">#9900FF00</color>
+    <color name="green70">#B300FF00</color>
+    <color name="green80">#CC00FF00</color>
+    <color name="green90">#E600FF00</color>
+    <color name="green">#00FF00</color>
+
+    <color name="transparent">#00000000</color>
+
+</resources>

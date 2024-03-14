@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GifImageView">
+        <!--gif文件引用-->
+        <attr name="gif_src" format="reference"  />
+        <!--是否加载完自动播放-->
+        <attr name="auth_play" format="boolean"  />
+        <!--播放次放，默认永远播放-->
+        <attr name="play_count" format="integer"  />
+        <!--播放完成后是否停留在最后一帧，默认false-->
+        <attr name="end_last_frame" format="boolean"  />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundImageView">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+</resources>

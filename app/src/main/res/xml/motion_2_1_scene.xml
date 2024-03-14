@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ConstraintSet android:id="@+id/frg_motion_2_1_b">
+        <Constraint android:id="@+id/rl_two"
+
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/rl_two_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="100dp"/>
+    </ConstraintSet>
+
+    <Transition
+            app:constraintSetStart="@layout/frg_motion_2_a"
+            app:constraintSetEnd="@id/frg_motion_2_1_b"
+            app:duration="200">
+
+        <OnSwipe
+                app:dragDirection="dragUp"
+                app:touchAnchorId="@id/rv_recyclerview"
+                app:touchAnchorSide="top"/>
+
+
+        <!--<KeyFrameSet>-->
+        <!--<KeyAttribute-->
+        <!--android:translationX="100dp"-->
+        <!--app:framePosition="100"-->
+        <!--app:motionTarget="@id/rl_two_title"/>-->
+
+        <!--</KeyFrameSet>-->
+
+
+    </Transition>
+
+</MotionScene>
