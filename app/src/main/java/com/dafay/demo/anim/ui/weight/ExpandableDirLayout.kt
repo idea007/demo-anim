@@ -18,7 +18,6 @@ import com.idea.library.richeditor.utils.DpUtils
  */
 class ExpandableDirLayout : RelativeLayout {
 
-
     private lateinit var tv_title: TextView
     private lateinit var rl_expandable_container: RelativeLayout
     private lateinit var rl_container: RelativeLayout
@@ -48,12 +47,9 @@ class ExpandableDirLayout : RelativeLayout {
     }
 
     fun init(context: Context) {
-
         LayoutInflater.from(context).inflate(R.layout.layout_expandable_dir, this, true)
         findViews()
-
         bindListener()
-
     }
 
     private var isExpand = false
@@ -80,7 +76,6 @@ class ExpandableDirLayout : RelativeLayout {
                 }
             })
             valueAnimator.start()
-
             isExpand = !isExpand
         })
     }
@@ -89,7 +84,6 @@ class ExpandableDirLayout : RelativeLayout {
         super.onSizeChanged(w, h, oldw, oldh)
         mViewWidth = w
         mViewHeight = h
-
         mChildHeight = DpUtils.dp2px(context, 70f)
     }
 
@@ -135,7 +129,6 @@ class ExpandableDirLayout : RelativeLayout {
                 onClick()
             })
             rl_expandable_container.addView(childContainerView)
-
         })
 
     }

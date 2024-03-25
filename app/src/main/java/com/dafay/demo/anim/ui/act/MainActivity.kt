@@ -33,7 +33,6 @@ class MainActivity : BaseActivity() {
 
     override fun onInitViews() {
         initGuide()
-//        printFrame()
     }
 
 
@@ -115,10 +114,6 @@ class MainActivity : BaseActivity() {
     private fun addTransitionColumn() {
         var expandableDirLayout3 = ExpandableDirLayout(this)
         expandableDirLayout3.setTitle("Transition")
-//        expandableDirLayout3.addChildView("ViewTreeObserver", "", {
-//            HostActivity.startHostActWithAFrg(this, Scene0Fragment())
-//        })
-
         expandableDirLayout3.addChildView("Scene: TransitionManager.go()", "", {
             HostActivity.startHostActWithAFrg(this, Scene1Fragment())
         })
@@ -126,13 +121,6 @@ class MainActivity : BaseActivity() {
         expandableDirLayout3.addChildView("Scene: beginDelayedTransition()", "", {
             HostActivity.startHostActWithAFrg(this, Scene2Fragment())
         })
-
-//        expandableDirLayout3.addChildView("Scene: menu demo", "", {
-//            HostActivity.startHostActWithAFrg(
-//                this,
-//                Scene3Fragment(), true
-//            )
-//        })
 
         expandableDirLayout3.addChildView("Transition:", "Transition 常用子类", {
 
@@ -146,10 +134,6 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this@MainActivity, ShareElement0AActivity::class.java))
         })
 
-//        expandableDirLayout3.addChildView("Share Elements 1", "", {
-//            startActivity(Intent(this@MainActivity, ShareElement1AActivity::class.java))
-//        })
-
         expandableDirLayout3.addChildView("Share Elements 2", "共享动画：状态栏和导航栏的处理", {
             startActivity(Intent(this@MainActivity, ShareElement2AActivity::class.java))
         })
@@ -161,7 +145,6 @@ class MainActivity : BaseActivity() {
         expandableDirLayout3.addChildView("Share Elements 4", "共享动画：Gif 共享到新页面继续播放", {
             startActivity(Intent(this@MainActivity, ShareElement4AActivity::class.java))
         })
-
 
         ll_guide_container.addView(expandableDirLayout3)
     }
