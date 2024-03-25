@@ -21,7 +21,7 @@ class ValueAnimator1Fragment : BaseFragment() {
 
     override fun onInitViews() {
         rootView.btn_click.setOnClickListener {
-
+            testAnim()
         }
     }
 
@@ -29,9 +29,9 @@ class ValueAnimator1Fragment : BaseFragment() {
         val valueAnimator = ValueAnimator.ofFloat(0f, 1f)
         // 动画持续时间
         valueAnimator.duration = 400
-        // 插值器，⽤于设置时间完成度到动画完成度的计算公式，速度曲线。LinearInterpolator 为默认插值器
+        // 插值器，定义时间完成度到动画完成度的计算公式，即速度曲线。LinearInterpolator 为默认插值器
         valueAnimator.interpolator = LinearInterpolator()
-        // 评估器，⽤于设置动画完成度到属性具体值的计算。FloatEvaluator 为默认求值器
+        // 评估器（求值器），定义如何计算给定属性的值。FloatEvaluator 为默认评估器
         valueAnimator.setEvaluator(FloatEvaluator())
         // 监听器
         valueAnimator.addUpdateListener(object : ValueAnimator.AnimatorUpdateListener {

@@ -1,5 +1,6 @@
 package com.dafay.demo.anim.ui.anim.objectanim
 
+import android.animation.AnimatorSet
 import android.animation.Keyframe
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
@@ -13,9 +14,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.idea.android.animandtran.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.LogUtils
+import com.idea.android.animandtran.R
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.frg_object_animator_0.view.*
 
@@ -28,49 +29,42 @@ class ObjectAnimator0Fragment : BaseFragment() {
 
     private val TAG = ObjectAnimator0Fragment::class.java.simpleName
 
-    private lateinit var mTargetView: TextView
+    private lateinit var targetView: TextView
 
     override fun getLayoutId(): Int {
         return R.layout.frg_object_animator_0
     }
 
     override fun onInitViews() {
-
         initView()
-
         bindListener()
-
     }
 
     private fun initView() {
-        mTargetView = rootView.tv_text
+        targetView = rootView.tv_text
     }
 
     @SuppressLint("ObjectAnimatorBinding")
     private fun bindListener() {
 
         addClickButton("translation_x", {
-            var objectAnimator =
-                ObjectAnimator.ofFloat(mTargetView, View.TRANSLATION_X, 0f, 500f, 600f)
+            var objectAnimator = ObjectAnimator.ofFloat(targetView, View.TRANSLATION_X, 0f, 500f, 600f)
             objectAnimator.setDuration(1000).start()
         })
 
         addClickButton("Property -> translation_x", {
-            var objectAnimator = ObjectAnimator.ofFloat(mTargetView, TRANSLATION_X, 0f, 500f, 600f)
+            var objectAnimator = ObjectAnimator.ofFloat(targetView, TRANSLATION_X, 0f, 500f, 600f)
             objectAnimator.setDuration(1000).start()
         })
 
         addClickButton("路径动画", {
-
             var path = Path()
             path.moveTo(0f, 0f)
             path.lineTo(0f, 500f)
             path.lineTo(500f, 500f)
             path.lineTo(500f, 0f)
             path.lineTo(0f, 0f)
-
-            var objectAnimator =
-                ObjectAnimator.ofFloat(mTargetView, View.TRANSLATION_X, View.TRANSLATION_Y, path)
+            var objectAnimator = ObjectAnimator.ofFloat(targetView, View.TRANSLATION_X, View.TRANSLATION_Y, path)
             objectAnimator.setDuration(1000).start()
         })
 
@@ -109,10 +103,9 @@ class ObjectAnimator0Fragment : BaseFragment() {
         })
 
         addClickButton("PropertyValuesHolder", {
-
-            var xHolder = PropertyValuesHolder.ofFloat(View.TRANSLATION_X, 0f, 600f)
-            var yHolder = PropertyValuesHolder.ofFloat(View.TRANSLATION_Y, 0f, 600f)
-            var animator = ObjectAnimator.ofPropertyValuesHolder(mTargetView, xHolder, yHolder)
+            val xHolder = PropertyValuesHolder.ofFloat(View.TRANSLATION_X, 0f, 600f)
+            val yHolder = PropertyValuesHolder.ofFloat(View.TRANSLATION_Y, 0f, 600f)
+            val animator = ObjectAnimator.ofPropertyValuesHolder(targetView, xHolder, yHolder)
             animator.setDuration(1000)
             animator.start()
         })
@@ -137,24 +130,19 @@ class ObjectAnimator0Fragment : BaseFragment() {
                 scaleFrame3,
                 scaleFrame4
             )
-            val animator = ObjectAnimator.ofPropertyValuesHolder(mTargetView, scaleX, scaleY)
+            val animator = ObjectAnimator.ofPropertyValuesHolder(targetView, scaleX, scaleY)
             animator.duration = 1000
-
             animator.addUpdateListener(object : ValueAnimator.AnimatorUpdateListener {
                 override fun onAnimationUpdate(animation: ValueAnimator?) {
                     LogUtils.d(TAG, "curValue=" + animation?.animatedValue)
                 }
             })
-
             animator.start()
         })
-
-
     }
-
     fun setCoordinates(x: Float, y: Float) {
-        mTargetView.translationX = x
-        mTargetView.translationY = y
+        targetView.translationX = x
+        targetView.translationY = y
     }
 
     @SuppressLint("NewApi")
@@ -162,18 +150,15 @@ class ObjectAnimator0Fragment : BaseFragment() {
         override fun setValue(view: View, value: Float) {
             view.translationX = value * 1.1f
         }
-
         override fun get(view: View): Float {
             return view.translationX * 1.1f
         }
     }
 
-
     private fun addClickButton(content: String = "button", onClick: () -> Unit): Button {
         var button = Button(context)
         button.isAllCaps = false
         button.apply {
-
             var marginLayoutParams =
                 ViewGroup.MarginLayoutParams(
                     DpUtils.screenWidth(context),
@@ -182,11 +167,8 @@ class ObjectAnimator0Fragment : BaseFragment() {
             this.layoutParams = marginLayoutParams
             text = content
             setOnClickListener({ onClick() })
-
         }
         rootView.ll_button_container.addView(button)
         return button
     }
-
-
 }
