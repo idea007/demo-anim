@@ -28,8 +28,8 @@ class TestImageChangeFragment : BaseFragment() {
 
     override fun onInitViews() {
 
-        mRootView.iv_img2.setOnClickListener({
-            changeTwoImage(mRootView.iv_img1, mRootView.iv_img2)
+        rootView.iv_img2.setOnClickListener({
+            changeTwoImage(rootView.iv_img1, rootView.iv_img2)
         })
 
     }

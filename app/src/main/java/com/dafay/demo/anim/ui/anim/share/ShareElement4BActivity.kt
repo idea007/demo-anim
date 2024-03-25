@@ -15,7 +15,7 @@ import com.bumptech.glide.request.target.CustomViewTarget
 import com.idea.android.animandtran.R
 import com.dafay.demo.anim.utils.LogUtils
 import com.dafay.demo.anim.utils.ObjectUtils
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import com.idea.android.wallpaper.utils.glide.GlideApp
 import kotlinx.android.synthetic.main.act_share_element_4_b.*
 

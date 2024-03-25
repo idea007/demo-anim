@@ -27,33 +27,33 @@ class Scene2Fragment : BaseFragment() {
 
     private fun initView() {
 
-        mRootView.ll_button_container?.addView(createButton("点击隐藏条目二") {
-            TransitionManager.beginDelayedTransition(mRootView.ll_container)
-            mRootView.v_1.visibility = View.GONE
+        rootView.ll_button_container?.addView(createButton("点击隐藏条目二") {
+            TransitionManager.beginDelayedTransition(rootView.ll_container)
+            rootView.v_1.visibility = View.GONE
         })
 
 
-        mRootView.ll_button_container?.addView(createButton("点击显示条目二") {
-            TransitionManager.beginDelayedTransition(mRootView.ll_container)
-            mRootView.v_1.visibility = View.VISIBLE
+        rootView.ll_button_container?.addView(createButton("点击显示条目二") {
+            TransitionManager.beginDelayedTransition(rootView.ll_container)
+            rootView.v_1.visibility = View.VISIBLE
         })
 
 
-        mRootView.ll_button_container?.addView(createButton("点击隐藏条目二、三") {
-            TransitionManager.beginDelayedTransition(mRootView.ll_container)
-            mRootView.v_1.visibility = View.GONE
-            mRootView.v_2.visibility = View.GONE
+        rootView.ll_button_container?.addView(createButton("点击隐藏条目二、三") {
+            TransitionManager.beginDelayedTransition(rootView.ll_container)
+            rootView.v_1.visibility = View.GONE
+            rootView.v_2.visibility = View.GONE
         })
 
 
-        mRootView.ll_button_container?.addView(createButton("点击显示条目二、三") {
-            TransitionManager.beginDelayedTransition(mRootView.ll_container)
-            mRootView.v_1.visibility = View.VISIBLE
-            mRootView.v_2.visibility = View.VISIBLE
+        rootView.ll_button_container?.addView(createButton("点击显示条目二、三") {
+            TransitionManager.beginDelayedTransition(rootView.ll_container)
+            rootView.v_1.visibility = View.VISIBLE
+            rootView.v_2.visibility = View.VISIBLE
         })
 
 
-        mRootView.ll_button_container?.addView(createButton("点击隐藏条目二 指定 transition") {
+        rootView.ll_button_container?.addView(createButton("点击隐藏条目二 指定 transition") {
 
             var transitionSet = TransitionSet()
                 .addTransition(ChangeBounds().apply {
@@ -67,13 +67,13 @@ class Scene2Fragment : BaseFragment() {
                     duration = 3000
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.ll_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.ll_container, transitionSet)
 
-            mRootView.v_1.visibility = View.GONE
+            rootView.v_1.visibility = View.GONE
         })
 
 
-        mRootView.ll_button_container?.addView(createButton("点击显示条目二 指定 transition") {
+        rootView.ll_button_container?.addView(createButton("点击显示条目二 指定 transition") {
 
             var transitionSet = TransitionSet()
                 .addTransition(ChangeBounds().apply {
@@ -87,9 +87,9 @@ class Scene2Fragment : BaseFragment() {
                     duration = 3000
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.ll_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.ll_container, transitionSet)
 
-            mRootView.v_1.visibility = View.VISIBLE
+            rootView.v_1.visibility = View.VISIBLE
         })
 
 

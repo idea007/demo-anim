@@ -14,7 +14,7 @@ import com.idea.android.animandtran.R
 import com.dafay.demo.anim.ui.anim.custom.ChangeTextTransition
 import com.dafay.demo.anim.ui.anim.custom.TextResize
 import com.dafay.demo.anim.utils.LogUtils
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import kotlinx.android.synthetic.main.act_share_element_1_b.*
 
 /**

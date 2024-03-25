@@ -57,13 +57,13 @@ class Scene3Fragment : BaseFragment() {
         var slide1 = Slide()
         slide1.slideEdge = Gravity.LEFT
         slide1.duration = DURATION_TIME
-        slide1.addTarget(mRootView.tv_menu)
+        slide1.addTarget(rootView.tv_menu)
         transitionSet.addTransition(slide1)
 
         var slide2 = Slide()
         slide2.slideEdge = Gravity.RIGHT
         slide2.duration = DURATION_TIME
-        slide2.addTarget(mRootView.iv_back)
+        slide2.addTarget(rootView.iv_back)
         transitionSet.addTransition(slide2)
 
 
@@ -72,105 +72,105 @@ class Scene3Fragment : BaseFragment() {
     val DURATION_TIME: Long = 300
     private fun bindListener() {
 
-        mRootView.rl_lattice_4.setOnClickListener(View.OnClickListener {
+        rootView.rl_lattice_4.setOnClickListener(View.OnClickListener {
 
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
 
-            mRootView.tv_menu.visibility = View.GONE
-            mRootView.iv_back.visibility = View.VISIBLE
-
-
-            setMargins(mRootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 3, 0, 0)
-            setMargins(mRootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 3, 0, 0)
-            setMargins(mRootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 3, 0, 0)
-            setMargins(mRootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 3, 0, 0)
-            setMargins(mRootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 + mLatticeHeight * 3, 0, 0)
-            setMargins(mRootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 + mLatticeHeight * 3, 0, 0)
-            setMargins(mRootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 + mLatticeHeight * 3, 0, 0)
-
-        })
+            rootView.tv_menu.visibility = View.GONE
+            rootView.iv_back.visibility = View.VISIBLE
 
 
-        mRootView.rl_lattice_5.setOnClickListener(View.OnClickListener {
-
-
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
-
-            mRootView.tv_menu.visibility = View.GONE
-            mRootView.iv_back.visibility = View.VISIBLE
-
-
-            setMargins(mRootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 4, 0, 0)
-            setMargins(mRootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 4, 0, 0)
-            setMargins(mRootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 4, 0, 0)
-            setMargins(mRootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 4, 0, 0)
-            setMargins(mRootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 - mLatticeHeight * 4, 0, 0)
-
-            setMargins(mRootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 + mLatticeHeight * 2, 0, 0)
-            setMargins(mRootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 + mLatticeHeight * 2, 0, 0)
-
-
-        })
-
-        mRootView.rl_lattice_6.setOnClickListener(View.OnClickListener {
-
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
-
-            mRootView.tv_menu.visibility = View.GONE
-            mRootView.iv_back.visibility = View.VISIBLE
-
-
-            setMargins(mRootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 5, 0, 0)
-            setMargins(mRootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 5, 0, 0)
-            setMargins(mRootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 5, 0, 0)
-            setMargins(mRootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 5, 0, 0)
-            setMargins(mRootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 - mLatticeHeight * 5, 0, 0)
-            setMargins(mRootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 - mLatticeHeight * 5, 0, 0)
-
-            setMargins(mRootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 + mLatticeHeight * 1, 0, 0)
-
-
-        })
-
-        mRootView.rl_lattice_7.setOnClickListener(View.OnClickListener {
-
-
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
-
-            mRootView.tv_menu.visibility = View.GONE
-            mRootView.iv_back.visibility = View.VISIBLE
-
-            setMargins(mRootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 6, 0, 0)
-            setMargins(mRootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 6, 0, 0)
-            setMargins(mRootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 6, 0, 0)
-            setMargins(mRootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 6, 0, 0)
-            setMargins(mRootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 - mLatticeHeight * 6, 0, 0)
-            setMargins(mRootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 - mLatticeHeight * 6, 0, 0)
-            setMargins(mRootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 - mLatticeHeight * 6, 0, 0)
-
+            setMargins(rootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 3, 0, 0)
+            setMargins(rootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 3, 0, 0)
+            setMargins(rootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 3, 0, 0)
+            setMargins(rootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 3, 0, 0)
+            setMargins(rootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 + mLatticeHeight * 3, 0, 0)
+            setMargins(rootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 + mLatticeHeight * 3, 0, 0)
+            setMargins(rootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 + mLatticeHeight * 3, 0, 0)
 
         })
 
 
-        mRootView.rl_lattice_0.setOnClickListener(View.OnClickListener {
-
-            if (mRootView.tv_menu.visibility == View.GONE) {
+        rootView.rl_lattice_5.setOnClickListener(View.OnClickListener {
 
 
-                TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
 
-                mRootView.tv_menu.visibility = View.VISIBLE
-                mRootView.iv_back.visibility = View.GONE
+            rootView.tv_menu.visibility = View.GONE
+            rootView.iv_back.visibility = View.VISIBLE
 
-                setMargins(mRootView.rl_lattice_0, 0, mLatticeHeight / 2, 0, 0)
-                setMargins(mRootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1, 0, 0)
-                setMargins(mRootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2, 0, 0)
-                setMargins(mRootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3, 0, 0)
-                setMargins(mRootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4, 0, 0)
-                setMargins(mRootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5, 0, 0)
-                setMargins(mRootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6, 0, 0)
-                setMargins(mRootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7, 0, 0)
+
+            setMargins(rootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 4, 0, 0)
+            setMargins(rootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 4, 0, 0)
+            setMargins(rootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 4, 0, 0)
+            setMargins(rootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 4, 0, 0)
+            setMargins(rootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 - mLatticeHeight * 4, 0, 0)
+
+            setMargins(rootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 + mLatticeHeight * 2, 0, 0)
+            setMargins(rootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 + mLatticeHeight * 2, 0, 0)
+
+
+        })
+
+        rootView.rl_lattice_6.setOnClickListener(View.OnClickListener {
+
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
+
+            rootView.tv_menu.visibility = View.GONE
+            rootView.iv_back.visibility = View.VISIBLE
+
+
+            setMargins(rootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 5, 0, 0)
+            setMargins(rootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 5, 0, 0)
+            setMargins(rootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 5, 0, 0)
+            setMargins(rootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 5, 0, 0)
+            setMargins(rootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 - mLatticeHeight * 5, 0, 0)
+            setMargins(rootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 - mLatticeHeight * 5, 0, 0)
+
+            setMargins(rootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 + mLatticeHeight * 1, 0, 0)
+
+
+        })
+
+        rootView.rl_lattice_7.setOnClickListener(View.OnClickListener {
+
+
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
+
+            rootView.tv_menu.visibility = View.GONE
+            rootView.iv_back.visibility = View.VISIBLE
+
+            setMargins(rootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1 - mLatticeHeight * 6, 0, 0)
+            setMargins(rootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2 - mLatticeHeight * 6, 0, 0)
+            setMargins(rootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3 - mLatticeHeight * 6, 0, 0)
+            setMargins(rootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4 - mLatticeHeight * 6, 0, 0)
+            setMargins(rootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5 - mLatticeHeight * 6, 0, 0)
+            setMargins(rootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6 - mLatticeHeight * 6, 0, 0)
+            setMargins(rootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7 - mLatticeHeight * 6, 0, 0)
+
+
+        })
+
+
+        rootView.rl_lattice_0.setOnClickListener(View.OnClickListener {
+
+            if (rootView.tv_menu.visibility == View.GONE) {
+
+
+                TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
+
+                rootView.tv_menu.visibility = View.VISIBLE
+                rootView.iv_back.visibility = View.GONE
+
+                setMargins(rootView.rl_lattice_0, 0, mLatticeHeight / 2, 0, 0)
+                setMargins(rootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1, 0, 0)
+                setMargins(rootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2, 0, 0)
+                setMargins(rootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3, 0, 0)
+                setMargins(rootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4, 0, 0)
+                setMargins(rootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5, 0, 0)
+                setMargins(rootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6, 0, 0)
+                setMargins(rootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7, 0, 0)
 
             }
         })
@@ -180,29 +180,29 @@ class Scene3Fragment : BaseFragment() {
     private fun updateLatticesPosition() {
 
 
-        mRootView.rl_lattice_0.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_1.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_2.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_3.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_4.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_5.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_6.layoutParams.height = mLatticeHeight
-        mRootView.rl_lattice_7.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_0.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_1.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_2.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_3.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_4.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_5.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_6.layoutParams.height = mLatticeHeight
+        rootView.rl_lattice_7.layoutParams.height = mLatticeHeight
 
-        mRootView.rl_lattice_top.layoutParams.height = mLatticeHeight / 2
-        mRootView.rl_lattice_boottom.layoutParams.height = mLatticeHeight / 2 + mDividerHeight * 4
+        rootView.rl_lattice_top.layoutParams.height = mLatticeHeight / 2
+        rootView.rl_lattice_boottom.layoutParams.height = mLatticeHeight / 2 + mDividerHeight * 4
 
 
-        setMargins(mRootView.rl_lattice_0, 0, mLatticeHeight / 2, 0, 0)
-        setMargins(mRootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1, 0, 0)
-        setMargins(mRootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2, 0, 0)
-        setMargins(mRootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3, 0, 0)
-        setMargins(mRootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4, 0, 0)
-        setMargins(mRootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5, 0, 0)
-        setMargins(mRootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6, 0, 0)
-        setMargins(mRootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7, 0, 0)
+        setMargins(rootView.rl_lattice_0, 0, mLatticeHeight / 2, 0, 0)
+        setMargins(rootView.rl_lattice_1, 0, mLatticeHeight / 2 + mLatticeHeight * 1, 0, 0)
+        setMargins(rootView.rl_lattice_2, 0, mLatticeHeight / 2 + mLatticeHeight * 2, 0, 0)
+        setMargins(rootView.rl_lattice_3, 0, mLatticeHeight / 2 + mLatticeHeight * 3, 0, 0)
+        setMargins(rootView.rl_lattice_4, 0, mLatticeHeight / 2 + mLatticeHeight * 4, 0, 0)
+        setMargins(rootView.rl_lattice_5, 0, mLatticeHeight / 2 + mLatticeHeight * 5, 0, 0)
+        setMargins(rootView.rl_lattice_6, 0, mLatticeHeight / 2 + mLatticeHeight * 6, 0, 0)
+        setMargins(rootView.rl_lattice_7, 0, mLatticeHeight / 2 + mLatticeHeight * 7, 0, 0)
 
-        setMargins(mRootView.rl_lattice_boottom, 0, mLatticeHeight / 2 + mLatticeHeight * 8 - mDividerHeight * 2, 0, 0)
+        setMargins(rootView.rl_lattice_boottom, 0, mLatticeHeight / 2 + mLatticeHeight * 8 - mDividerHeight * 2, 0, 0)
 
     }
 

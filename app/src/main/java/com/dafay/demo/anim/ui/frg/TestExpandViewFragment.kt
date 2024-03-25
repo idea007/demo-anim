@@ -21,31 +21,31 @@ class TestExpandViewFragment : BaseFragment() {
 
     lateinit var layoutParams: ViewGroup.LayoutParams
     override fun onInitViews() {
-        layoutParams = mRootView.rl_test.layoutParams
+        layoutParams = rootView.rl_test.layoutParams
 
-        mRootView.btn_expand.setOnClickListener({
+        rootView.btn_expand.setOnClickListener({
 
             var transitionSet = TransitionSet().addTransition(
                 ChangeBounds().apply {
                     duration = 2000
                 }
             )
-            TransitionManager.beginDelayedTransition(mRootView.fl_container,transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.fl_container,transitionSet)
             layoutParams.height = 0
-            mRootView.rl_test.layoutParams = layoutParams
+            rootView.rl_test.layoutParams = layoutParams
 
         })
 
-        mRootView.btn_unexpand.setOnClickListener({
+        rootView.btn_unexpand.setOnClickListener({
 
             var transitionSet = TransitionSet().addTransition(
                 ChangeBounds().apply {
                     duration = 2000
                 }
             )
-            TransitionManager.beginDelayedTransition(mRootView.fl_container,transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.fl_container,transitionSet)
             layoutParams.height = 200*3
-            mRootView.rl_test.layoutParams = layoutParams
+            rootView.rl_test.layoutParams = layoutParams
 
         })
     }

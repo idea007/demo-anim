@@ -13,12 +13,13 @@ import com.dafay.demo.anim.ui.anim.scene.Scene2Fragment
 import com.dafay.demo.anim.ui.anim.scene.Scene1Fragment
 import com.dafay.demo.anim.ui.anim.share.*
 import com.dafay.demo.anim.ui.anim.tran.TranChangeBounds0Fragment
-import com.dafay.demo.anim.ui.anim.valueanim.ValueAnimator0Fragment
+import com.dafay.demo.anim.ui.anim.valueanim.ValueAnimator1Fragment
+import com.dafay.demo.anim.ui.anim.valueanim.ValueAnimator2Fragment
 import com.dafay.demo.anim.ui.frg.*
 import com.dafay.demo.anim.ui.frg.snap.TestRecyclerViewFlingFragment
 import com.dafay.demo.anim.ui.weight.ExpandableDirLayout
 import com.dafay.demo.anim.utils.LogUtils
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import kotlinx.android.synthetic.main.act_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -37,94 +38,57 @@ class MainActivity : BaseActivity() {
 
 
     private fun initGuide() {
-        addObjectAnimatorColumn()
         addValueAnimatorColumn()
+        addObjectAnimatorColumn()
         addTransitionColumn()
         addMotionLayoutColumn()
         addOtherTestColumn()
     }
 
-    private fun addOtherTestColumn() {
-        var expandableDirLayout5 = ExpandableDirLayout(this)
-        expandableDirLayout5.setTitle("Test")
-        expandableDirLayout5.addChildView("TestGif", "", {
-            HostActivity.startHostActWithAFrg(this, TestGifPlayFragment())
-        })
 
-        expandableDirLayout5.addChildView("TestImageMatrix", "", {
-            HostActivity.startHostActWithAFrg(this, TestImageMatrixFragment())
-        })
+    private fun addValueAnimatorColumn() {
 
-        expandableDirLayout5.addChildView("动画执行过程中的跳转", "", {
-            HostActivity.startHostActWithAFrg(
-                this,
-                TestAnimAbortFragment()
-            )
+        var expandableDirLayout = ExpandableDirLayout(this)
+        expandableDirLayout.setTitle("ValueAnimator")
+        expandableDirLayout.addChildView("ValueAnimator1", "ValueAnimator 示例", {
+            HostActivity.startActivity(this, ValueAnimator1Fragment())
         })
+        expandableDirLayout.addChildView("ValueAnimator2",
+            "ValueAnimator 原理",
+            {
+                HostActivity.startActivity(this, ValueAnimator2Fragment())
+            })
 
-        expandableDirLayout5.addChildView("TestExpandView", "", {
-            HostActivity.startHostActWithAFrg(
-                this,
-                TestExpandViewFragment()
-            )
-        })
+        ll_guide_container.addView(expandableDirLayout)
 
-        expandableDirLayout5.addChildView("CustomImageView", "", {
-            HostActivity.startHostActWithAFrg(
-                this,
-                TestCustomImageFragment()
-            )
-        })
-
-        expandableDirLayout5.addChildView("Image Change", "", {
-            HostActivity.startHostActWithAFrg(
-                this,
-                TestImageChangeFragment()
-            )
-        })
-
-        expandableDirLayout5.addChildView("RecyclerView fling", "", {
-            HostActivity.startHostActWithAFrg(
-                this,
-                TestRecyclerViewFlingFragment()
-            )
-        })
-
-        ll_guide_container.addView(expandableDirLayout5)
 
     }
 
-    private fun addMotionLayoutColumn() {
-        var expandableDirLayout4 = ExpandableDirLayout(this)
-        expandableDirLayout4.setTitle("MotionLayout")
-        expandableDirLayout4.addChildView("MotionLayout:0", "", {
-            HostActivity.startHostActWithAFrg(this, Motion0Fragment())
-        })
-        expandableDirLayout4.addChildView("MotionLayout:1", "", {
-            HostActivity.startHostActWithAFrg(this, Motion1Fragment())
-        })
-
-        expandableDirLayout4.addChildView("MotionLayout:2", "", {
-            HostActivity.startHostActWithAFrg(this, Motion2Fragment())
-        })
-        ll_guide_container.addView(expandableDirLayout4)
-
+    private fun addObjectAnimatorColumn() {
+        var expandableDirLayout = ExpandableDirLayout(this)
+        expandableDirLayout.setTitle("ObjectAnimator")
+        expandableDirLayout.addChildView("ObjectAnimator1",
+            "ObjectAnimator 常规用法",
+            {
+                HostActivity.startActivity(this, ObjectAnimator0Fragment())
+            })
+        ll_guide_container.addView(expandableDirLayout)
     }
 
     private fun addTransitionColumn() {
         var expandableDirLayout3 = ExpandableDirLayout(this)
         expandableDirLayout3.setTitle("Transition")
         expandableDirLayout3.addChildView("Scene: TransitionManager.go()", "", {
-            HostActivity.startHostActWithAFrg(this, Scene1Fragment())
+            HostActivity.startActivity(this, Scene1Fragment())
         })
 
         expandableDirLayout3.addChildView("Scene: beginDelayedTransition()", "", {
-            HostActivity.startHostActWithAFrg(this, Scene2Fragment())
+            HostActivity.startActivity(this, Scene2Fragment())
         })
 
         expandableDirLayout3.addChildView("Transition:", "Transition 常用子类", {
 
-            HostActivity.startHostActWithAFrg(
+            HostActivity.startActivity(
                 this,
                 TranChangeBounds0Fragment()
             )
@@ -149,30 +113,71 @@ class MainActivity : BaseActivity() {
         ll_guide_container.addView(expandableDirLayout3)
     }
 
-    private fun addValueAnimatorColumn() {
+    private fun addMotionLayoutColumn() {
+        var expandableDirLayout4 = ExpandableDirLayout(this)
+        expandableDirLayout4.setTitle("MotionLayout")
+        expandableDirLayout4.addChildView("MotionLayout:0", "", {
+            HostActivity.startActivity(this, Motion0Fragment())
+        })
+        expandableDirLayout4.addChildView("MotionLayout:1", "", {
+            HostActivity.startActivity(this, Motion1Fragment())
+        })
 
-        var expandableDirLayout = ExpandableDirLayout(this)
-        expandableDirLayout.setTitle("ValueAnimator")
-        expandableDirLayout.addChildView("ValueAnimator1",
-            "ValueAnimator 原理",
-            {
-                HostActivity.startHostActWithAFrg(this, ValueAnimator0Fragment())
-            })
-        expandableDirLayout.addChildView("ValueAnimator2", "", {})
-        ll_guide_container.addView(expandableDirLayout)
-
+        expandableDirLayout4.addChildView("MotionLayout:2", "", {
+            HostActivity.startActivity(this, Motion2Fragment())
+        })
+        ll_guide_container.addView(expandableDirLayout4)
 
     }
 
-    private fun addObjectAnimatorColumn() {
-        var expandableDirLayout = ExpandableDirLayout(this)
-        expandableDirLayout.setTitle("ObjectAnimator")
-        expandableDirLayout.addChildView("ObjectAnimator1",
-            "ObjectAnimator 常规用法",
-            {
-                HostActivity.startHostActWithAFrg(this, ObjectAnimator0Fragment())
-            })
-        ll_guide_container.addView(expandableDirLayout)
+    private fun addOtherTestColumn() {
+        var expandableDirLayout5 = ExpandableDirLayout(this)
+        expandableDirLayout5.setTitle("Test")
+        expandableDirLayout5.addChildView("TestGif", "", {
+            HostActivity.startActivity(this, TestGifPlayFragment())
+        })
+
+        expandableDirLayout5.addChildView("TestImageMatrix", "", {
+            HostActivity.startActivity(this, TestImageMatrixFragment())
+        })
+
+        expandableDirLayout5.addChildView("动画执行过程中的跳转", "", {
+            HostActivity.startActivity(
+                this,
+                TestAnimAbortFragment()
+            )
+        })
+
+        expandableDirLayout5.addChildView("TestExpandView", "", {
+            HostActivity.startActivity(
+                this,
+                TestExpandViewFragment()
+            )
+        })
+
+        expandableDirLayout5.addChildView("CustomImageView", "", {
+            HostActivity.startActivity(
+                this,
+                TestCustomImageFragment()
+            )
+        })
+
+        expandableDirLayout5.addChildView("Image Change", "", {
+            HostActivity.startActivity(
+                this,
+                TestImageChangeFragment()
+            )
+        })
+
+        expandableDirLayout5.addChildView("RecyclerView fling", "", {
+            HostActivity.startActivity(
+                this,
+                TestRecyclerViewFlingFragment()
+            )
+        })
+
+        ll_guide_container.addView(expandableDirLayout5)
+
     }
 
 
@@ -191,15 +196,11 @@ class MainActivity : BaseActivity() {
 
             if (preSecond != currentSecond) {
                 preSecond = currentSecond
-
                 LogUtils.w("-" + sdf.format(calendar.time) + " 当前秒 共 $frameIndex 帧 ")
-
                 frameIndex = 0
             }
             frameIndex++
-
             LogUtils.w(sdf.format(calendar.time) + " 打印 doFrame 第 $frameIndex 帧 frameTime=" + (it - preFrameTime))
-
             postNextFrame(choreographer)
             preFrameTime = it
         }
@@ -207,13 +208,10 @@ class MainActivity : BaseActivity() {
     }
 
     private fun printFrame() {
-
         val display = windowManager.defaultDisplay
         LogUtils.i("手机 refreshRate =${display.refreshRate}")
         var choreographer = Choreographer.getInstance()
         postNextFrame(choreographer)
-
-
     }
 
     /**
@@ -246,7 +244,6 @@ class MainActivity : BaseActivity() {
 
             }
         })
-
         anim.start()
     }
 

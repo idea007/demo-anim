@@ -46,25 +46,25 @@ class TestRecyclerViewFlingFragment : BaseFragment() {
     private var isBlockMode = true
 
     private fun bindListener() {
-        mRootView.sb_seekbar.max = 1000
-        mRootView.sb_seekbar.progress = 500
-        mRootView.tv_velocity_limit.text = "" + mRootView.sb_seekbar.progress * 10
-        mRootView.btn_mode.setOnClickListener({
-            if (mRootView.btn_mode.text == "阻塞模式") {
-                mRootView.btn_mode.text = "流畅模式"
-                mRootView.rl_seek_container.visibility = View.GONE
+        rootView.sb_seekbar.max = 1000
+        rootView.sb_seekbar.progress = 500
+        rootView.tv_velocity_limit.text = "" + rootView.sb_seekbar.progress * 10
+        rootView.btn_mode.setOnClickListener({
+            if (rootView.btn_mode.text == "阻塞模式") {
+                rootView.btn_mode.text = "流畅模式"
+                rootView.rl_seek_container.visibility = View.GONE
                 isBlockMode = false
             } else {
-                mRootView.btn_mode.text = "阻塞模式"
-                mRootView.rl_seek_container.visibility = View.VISIBLE
+                rootView.btn_mode.text = "阻塞模式"
+                rootView.rl_seek_container.visibility = View.VISIBLE
                 isBlockMode = true
             }
         })
 
 
-        mRootView.sb_seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        rootView.sb_seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                mRootView.tv_velocity_limit.text = "" + progress * 10
+                rootView.tv_velocity_limit.text = "" + progress * 10
                 DEFAULT_FLING_LIMIT = progress * 10
             }
 
@@ -87,7 +87,7 @@ class TestRecyclerViewFlingFragment : BaseFragment() {
 
 
     private fun initRecyclerView() {
-        mRootView.rv_recyclerview.apply {
+        rootView.rv_recyclerview.apply {
             mLayoutManager = LinearLayoutManager(context)
             layoutManager = mLayoutManager
             mAdapter = FlingTestAdapter(context)
@@ -102,7 +102,7 @@ class TestRecyclerViewFlingFragment : BaseFragment() {
         SCROLL_STATE_SETTLING，再是手指松开但是RecyclerView还在滑动
         SCROLL_STATE_IDLE， 最后是RecyclerView滚动停止状态
          */
-        mRootView.rv_recyclerview.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        rootView.rv_recyclerview.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
@@ -136,7 +136,7 @@ class TestRecyclerViewFlingFragment : BaseFragment() {
             }
         })
 
-        mRootView.rv_recyclerview.setOnFlingListener(object : RecyclerView.OnFlingListener() {
+        rootView.rv_recyclerview.setOnFlingListener(object : RecyclerView.OnFlingListener() {
             override fun onFling(velocityX: Int, velocityY: Int): Boolean {
                 LogUtils.w(TAG, "------1 onFling velocityX=$velocityX velocityY=$velocityY")
 
@@ -193,7 +193,7 @@ class TestRecyclerViewFlingFragment : BaseFragment() {
                         "------1 onFling distance=$distance decoratedEnd=$decoratedEnd decoratedMeasurement=$decoratedMeasurement"
                     )
 
-                    mRootView.rv_recyclerview.smoothScrollBy(0, distance)
+                    rootView.rv_recyclerview.smoothScrollBy(0, distance)
 
 
                 } else if (mLayoutManager.canScrollHorizontally()) {

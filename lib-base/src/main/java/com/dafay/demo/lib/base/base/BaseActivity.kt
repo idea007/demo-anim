@@ -1,4 +1,4 @@
-package com.idea.android.duanzirobot
+package com.dafay.demo.lib.base.base
 
 import android.os.Bundle
 import android.view.WindowManager
@@ -11,9 +11,6 @@ abstract class BaseActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) = try {
         super.onCreate(savedInstanceState)
-
-
-        preSetContentView()
         if (isFullScreen()) {
             //去除状态栏
             getWindow().setFlags(
@@ -28,12 +25,7 @@ abstract class BaseActivity : AppCompatActivity() {
         }
         onInitViews()
     } catch (e: Exception) {
-
-    }
-
-
-    open fun preSetContentView() {
-
+        e.printStackTrace()
     }
 
 
@@ -47,6 +39,5 @@ abstract class BaseActivity : AppCompatActivity() {
     protected abstract fun getLayoutId(bundle: Bundle?): Int
 
     protected abstract fun onInitViews()
-
 
 }

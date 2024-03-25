@@ -13,9 +13,7 @@ import java.lang.reflect.Method
  */
 object ImageViewUtils {
 
-
     private val TAG: String = ImageViewUtils::class.java.name
-
     private var sAnimateTransformMethod: Method? = null
     private var sAnimateTransformMethodFetched = false
 

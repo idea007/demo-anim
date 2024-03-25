@@ -1,3 +1,4 @@
 rootProject.name='demo-anim'
 
 include ':app'
+include ':lib-base'

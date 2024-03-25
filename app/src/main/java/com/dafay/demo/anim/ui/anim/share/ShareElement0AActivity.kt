@@ -14,7 +14,7 @@ import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
 import com.idea.android.animandtran.R
 import com.dafay.demo.anim.utils.LogUtils
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.act_share_element_0_a.*
 
@@ -25,12 +25,6 @@ import kotlinx.android.synthetic.main.act_share_element_0_a.*
 class ShareElement0AActivity : BaseActivity() {
     override fun getLayoutId(bundle: Bundle?): Int {
         return R.layout.act_share_element_0_a
-    }
-
-    override fun preSetContentView() {
-        super.preSetContentView()
-
-        // style 设置 <item name="android:windowActivityTransitions">true</item>
     }
 
     override fun onInitViews() {

@@ -12,9 +12,7 @@ object LogUtils {
 
     // 是否需要打印bug，可以在 gradle 配置debug 参数
     private var isDebug = true
-
-    private val DEFALUT_TAG = "AnimAndTran"
-
+    private val DEFALUT_TAG = "Anim"
     private val prefix = "------ "
 
     private fun buildLogHeader(): String {

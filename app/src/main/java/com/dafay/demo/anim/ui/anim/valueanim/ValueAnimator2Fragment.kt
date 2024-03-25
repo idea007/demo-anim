@@ -6,20 +6,20 @@ import android.view.View
 import com.idea.android.animandtran.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.LogUtils
-import kotlinx.android.synthetic.main.frg_value_animator_0.view.*
+import kotlinx.android.synthetic.main.frg_value_animator_2.view.*
 
 
 /**
  * Created by  idea on 2019-11-23$ 10:52$
  * des:
  */
-class ValueAnimator0Fragment : BaseFragment() {
+class ValueAnimator2Fragment : BaseFragment() {
 
     private val DURATION_TIME: Long = 5000
     private val DEFAULT_DISTANCE = 500
 
     override fun getLayoutId(): Int {
-        return R.layout.frg_value_animator_0
+        return R.layout.frg_value_animator_1
     }
 
     override fun onInitViews() {
@@ -28,7 +28,7 @@ class ValueAnimator0Fragment : BaseFragment() {
 
     private fun bindListener() {
 
-        mRootView.btn_valueanimator.setOnClickListener({
+        rootView.btn_valueanimator.setOnClickListener({
 
             var valueAnim = ValueAnimator.ofFloat(0f, 1f)
             valueAnim.duration = DURATION_TIME
@@ -39,7 +39,7 @@ class ValueAnimator0Fragment : BaseFragment() {
                     if (progress == 0f) {
                         LogUtils.d("------ addUpdateListener progress=$progress")
                     }
-                    mRootView?.v_0.translationX = progress * DEFAULT_DISTANCE
+                    rootView?.v_0.translationX = progress * DEFAULT_DISTANCE
                 }
             })
 
@@ -47,7 +47,7 @@ class ValueAnimator0Fragment : BaseFragment() {
         })
 
 
-        mRootView.btn_custom_anim.setOnClickListener(View.OnClickListener {
+        rootView.btn_custom_anim.setOnClickListener(View.OnClickListener {
             var choreographer = Choreographer.getInstance()
             startTime = 0
             postNextFrame(choreographer)
@@ -70,9 +70,9 @@ class ValueAnimator0Fragment : BaseFragment() {
 
             if (currentProgress > 1) {
                 currentProgress = 1f
-                mRootView?.v_1.translationX = currentProgress * DEFAULT_DISTANCE
+                rootView?.v_1.translationX = currentProgress * DEFAULT_DISTANCE
             } else {
-                mRootView?.v_1.translationX = currentProgress * DEFAULT_DISTANCE
+                rootView?.v_1.translationX = currentProgress * DEFAULT_DISTANCE
                 postNextFrame(choreographer)
             }
         }

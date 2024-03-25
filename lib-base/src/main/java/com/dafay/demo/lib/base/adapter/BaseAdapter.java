@@ -1,4 +1,4 @@
-package com.dafay.demo.anim.ui.adapter;
+package com.dafay.demo.lib.base.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,10 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by idea on 2019/10/13.
- * des:包含常用的几个方法
- */
 
 public class BaseAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

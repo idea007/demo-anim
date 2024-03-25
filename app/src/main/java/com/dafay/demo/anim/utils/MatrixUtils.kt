@@ -28,12 +28,9 @@ object MatrixUtils {
                 val right: Int = imageView.getRight()
                 val bottom: Int = imageView.getBottom()
                 val bounds = Rect(left, top, right, bottom)
-
                 val drawable = imageView.drawable ?: return null
-
                 val drawableWidth: Int = drawable.getIntrinsicWidth()
                 val drawableHeight: Int = drawable.getIntrinsicHeight()
-
                 if (drawableWidth > 0 && drawableHeight > 0) {
                     val scaleX = bounds.width() as Float / drawableWidth
                     val scaleY = bounds.height() as Float / drawableHeight
@@ -46,9 +43,6 @@ object MatrixUtils {
         } else {
             matrix = Matrix(imageView.getImageMatrix())
         }
-
         return matrix
     }
-
-
 }

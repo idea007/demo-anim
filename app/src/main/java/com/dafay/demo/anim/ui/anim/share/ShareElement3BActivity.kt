@@ -13,7 +13,7 @@ import com.dafay.demo.anim.ui.adapter.ImagePagerAdapter
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.ui.frg.ImageDetailsFragment
 import com.dafay.demo.anim.utils.LogUtils
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import kotlinx.android.synthetic.main.act_share_element_3_b.*
 
 /**

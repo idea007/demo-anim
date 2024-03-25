@@ -31,16 +31,16 @@ class Scene1Fragment : BaseFragment() {
     private fun initView() {
         // 不能被复用
         mScene1 = Scene(
-            mRootView.rl_root_scene,
-            mRootView.rl_root_scene.findViewById(R.id.rl_container) as ViewGroup
+            rootView.rl_root_scene,
+            rootView.rl_root_scene.findViewById(R.id.rl_container) as ViewGroup
         )
         mScene2 = Scene.getSceneForLayout(
-            mRootView.rl_root_scene,
+            rootView.rl_root_scene,
             R.layout.layout_section_scene_2,
             context
         )
         mScene3 = Scene.getSceneForLayout(
-            mRootView.rl_root_scene,
+            rootView.rl_root_scene,
             R.layout.layout_section_scene_3,
             context
         )
@@ -48,7 +48,7 @@ class Scene1Fragment : BaseFragment() {
 
     private fun bindListener() {
 
-        mRootView.rg_select_scene.setOnCheckedChangeListener(object :
+        rootView.rg_select_scene.setOnCheckedChangeListener(object :
             RadioGroup.OnCheckedChangeListener {
             override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
                 when (checkedId) {

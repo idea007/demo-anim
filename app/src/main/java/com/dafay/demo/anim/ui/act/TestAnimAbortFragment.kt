@@ -25,7 +25,7 @@ class TestAnimAbortFragment : BaseFragment() {
 
 
     private fun bindListener() {
-        mRootView.tv_text.setOnClickListener {
+        rootView.tv_text.setOnClickListener {
 
             var anim = ValueAnimator.ofFloat(0f, 1f)
             var progress = 0f
@@ -35,20 +35,14 @@ class TestAnimAbortFragment : BaseFragment() {
                 override fun onAnimationUpdate(animation: ValueAnimator?) {
                     progress = animation?.animatedValue as Float
                     LogUtils.d("---- progress=$progress")
-
-                    mRootView.tv_text.alpha = 1.0f - progress
-                    mRootView.v_bg.scaleY = 1f + progress * 10
+                    rootView.tv_text.alpha = 1.0f - progress
+                    rootView.v_bg.scaleY = 1f + progress * 10
                 }
             })
-
             anim.start()
-
-
-            val activityOptions =
-                ActivityOptionsCompat.makeSceneTransitionAnimation(mActivity!!)
-
+            val activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(activity!!)
             startActivity(
-                Intent(mActivity, TestAnimAbortBActivity::class.java),
+                Intent(activity, TestAnimAbortBActivity::class.java),
                 activityOptions.toBundle()
             )
         }

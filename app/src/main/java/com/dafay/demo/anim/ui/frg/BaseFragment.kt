@@ -1,6 +1,5 @@
 package com.dafay.demo.anim.ui.frg
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,20 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 abstract class BaseFragment : Fragment() {
-
-    lateinit var mRootView: View
-    var mActivity: Activity? = null
-
+    lateinit var rootView: View
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mActivity = activity
+        rootView = inflater.inflate(getLayoutId(), null)
+        return rootView
+    }
 
-        mRootView = inflater.inflate(getLayoutId(), null)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         onInitViews()
-
-        return mRootView
     }
 
     protected abstract fun getLayoutId(): Int
     protected abstract fun onInitViews()
-
 }

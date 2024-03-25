@@ -14,6 +14,7 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.dafay.demo.lib.base.adapter.BaseAdapter
 import com.idea.android.animandtran.R
 import kotlinx.android.synthetic.main.item_grid_2.view.*
 

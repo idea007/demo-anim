@@ -18,11 +18,11 @@ class TestCustomImageFragment : BaseFragment() {
 
     override fun onInitViews() {
 
-        mRootView.iv_custom_mark.post {
-            mRootView.iv_custom_mark.setImageBitmap(
+        rootView.iv_custom_mark.post {
+            rootView.iv_custom_mark.setImageBitmap(
                 getCustomBitamp(
-                    mRootView.iv_custom_mark.width,
-                    mRootView.iv_custom_mark.height
+                    rootView.iv_custom_mark.width,
+                    rootView.iv_custom_mark.height
                 )
             )
         }
@@ -34,13 +34,13 @@ class TestCustomImageFragment : BaseFragment() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
-            mRootView.ll_repert_container.post({
+            rootView.ll_repert_container.post({
                 var roundDrawable = RoundDrawable(
-                    mRootView.ll_repert_container.context,
-                    mRootView.ll_repert_container.width,
-                    mRootView.ll_repert_container.height
+                    rootView.ll_repert_container.context,
+                    rootView.ll_repert_container.width,
+                    rootView.ll_repert_container.height
                 )
-                mRootView.ll_repert_container.foreground = roundDrawable
+                rootView.ll_repert_container.foreground = roundDrawable
             })
 
         }

@@ -19,10 +19,9 @@ class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.ViewHolder>() {
         return 15
     }
 
-    override fun onBindViewHolder(holder: SimpleListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
     }
 
     class ViewHolder(val layout: ConstraintLayout) : RecyclerView.ViewHolder(layout)
-
 }

@@ -19,7 +19,7 @@ import com.dafay.demo.anim.ui.weight.recyclerview.itemdecoration.MediaGridInset
 import com.dafay.demo.anim.utils.LogUtils
 import com.dafay.demo.anim.utils.ObjectUtils
 import com.dafay.demo.anim.utils.asGif
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import com.idea.android.wallpaper.utils.glide.GlideApp
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.act_share_element_4_a.*

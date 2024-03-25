@@ -17,7 +17,7 @@ import com.dafay.demo.anim.data.ResScouce
 import com.dafay.demo.anim.ui.adapter.Grid2Adapter
 import com.dafay.demo.anim.ui.weight.recyclerview.itemdecoration.MediaGridInset
 import com.dafay.demo.anim.utils.LogUtils
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.act_share_element_3_a.*
 import java.util.*

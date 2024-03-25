@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.transition.Fade
 import android.transition.TransitionSet
 import com.idea.android.animandtran.R
-import com.idea.android.duanzirobot.BaseActivity
+import com.dafay.demo.lib.base.base.BaseActivity
 
 /**
  * Created by  idea on 2019-11-27$ 14:47$

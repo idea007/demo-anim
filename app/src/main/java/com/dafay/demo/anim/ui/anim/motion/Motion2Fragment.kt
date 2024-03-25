@@ -23,7 +23,7 @@ class Motion2Fragment : BaseFragment() {
 
     private fun initRecyclerView() {
 
-        mRootView.rv_recyclerview.apply {
+        rootView.rv_recyclerview.apply {
             setHasFixedSize(true)
             adapter = SimpleListAdapter()
             layoutManager = LinearLayoutManager(context)

@@ -43,7 +43,7 @@ class ObjectAnimator0Fragment : BaseFragment() {
     }
 
     private fun initView() {
-        mTargetView = mRootView.tv_text
+        mTargetView = rootView.tv_text
     }
 
     @SuppressLint("ObjectAnimatorBinding")
@@ -88,7 +88,7 @@ class ObjectAnimator0Fragment : BaseFragment() {
 
         addClickButton("TextView 颜色变化", {
             var objectAnimator = ObjectAnimator.ofArgb(
-                mRootView.tv_text,
+                rootView.tv_text,
                 "textColor",
                 Color.parseColor("#000000"),
                 Color.parseColor("#E012CD"),
@@ -100,7 +100,7 @@ class ObjectAnimator0Fragment : BaseFragment() {
 
         addClickButton("TextView textSize 变化", {
             var objectAnimator = ObjectAnimator.ofFloat(
-                mRootView.tv_text,
+                rootView.tv_text,
                 "textSize",
                 20f, 50f
             )
@@ -184,7 +184,7 @@ class ObjectAnimator0Fragment : BaseFragment() {
             setOnClickListener({ onClick() })
 
         }
-        mRootView.ll_button_container.addView(button)
+        rootView.ll_button_container.addView(button)
         return button
     }
 

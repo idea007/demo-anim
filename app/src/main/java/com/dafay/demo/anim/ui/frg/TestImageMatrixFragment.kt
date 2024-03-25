@@ -21,15 +21,15 @@ class TestImageMatrixFragment : BaseFragment() {
 
 
     override fun onInitViews() {
-        mRootView.iv_origin_image.scaleType = ImageView.ScaleType.CENTER_CROP
-        mRootView.iv_origin_image.setImageResource(R.mipmap.img_29)
+        rootView.iv_origin_image.scaleType = ImageView.ScaleType.CENTER_CROP
+        rootView.iv_origin_image.setImageResource(R.mipmap.img_29)
 
-        mRootView.iv_origin_image.post(object : Runnable {
+        rootView.iv_origin_image.post(object : Runnable {
             override fun run() {
-                mViewCenterX = mRootView.iv_origin_image.width / 2f
-                mViewCenterY = mRootView.iv_origin_image.height / 2f
+                mViewCenterX = rootView.iv_origin_image.width / 2f
+                mViewCenterY = rootView.iv_origin_image.height / 2f
 
-                originMatrix = MatrixUtils.getImageViewMatrix(mRootView.iv_origin_image)
+                originMatrix = MatrixUtils.getImageViewMatrix(rootView.iv_origin_image)
                 originMatrix?.getValues(matrixValues)
 
             }
@@ -54,15 +54,15 @@ class TestImageMatrixFragment : BaseFragment() {
     private var mViewCenterY = 0f
 
     private fun bindListener() {
-        mRootView.sb_translate_x.max = 300
-        mRootView.sb_translate_x.setOnSeekBarChangeListener(object :
+        rootView.sb_translate_x.max = 300
+        rootView.sb_translate_x.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
 
                 var thumDx = progress.toFloat() - dx
                 dx = progress.toFloat()
                 originMatrix?.postTranslate(thumDx, 0f)
-                ImageViewUtils.animateTransform(mRootView.iv_origin_image, originMatrix)
+                ImageViewUtils.animateTransform(rootView.iv_origin_image, originMatrix)
 
             }
 
@@ -73,15 +73,15 @@ class TestImageMatrixFragment : BaseFragment() {
             }
         })
 
-        mRootView.sb_translate_y.max = 300
-        mRootView.sb_translate_y.setOnSeekBarChangeListener(object :
+        rootView.sb_translate_y.max = 300
+        rootView.sb_translate_y.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
 
                 var thumDy = progress.toFloat() - dy
                 dy = progress.toFloat()
                 originMatrix?.postTranslate(0f, thumDy)
-                ImageViewUtils.animateTransform(mRootView.iv_origin_image, originMatrix)
+                ImageViewUtils.animateTransform(rootView.iv_origin_image, originMatrix)
 
             }
 
@@ -92,15 +92,15 @@ class TestImageMatrixFragment : BaseFragment() {
             }
         })
 
-        mRootView.sb_rotate.max = 180
-        mRootView.sb_rotate.setOnSeekBarChangeListener(object :
+        rootView.sb_rotate.max = 180
+        rootView.sb_rotate.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 var thumRotation = progress - rotation
                 rotation = progress.toFloat()
                 originMatrix?.postRotate(thumRotation, mViewCenterX, mViewCenterY)
 
-                ImageViewUtils.animateTransform(mRootView.iv_origin_image, originMatrix)
+                ImageViewUtils.animateTransform(rootView.iv_origin_image, originMatrix)
 
             }
 
@@ -112,8 +112,8 @@ class TestImageMatrixFragment : BaseFragment() {
         })
 
 
-        mRootView.sb_zoom.setProgress(10)
-        mRootView.sb_zoom.setOnSeekBarChangeListener(object :
+        rootView.sb_zoom.setProgress(10)
+        rootView.sb_zoom.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
 
@@ -127,7 +127,7 @@ class TestImageMatrixFragment : BaseFragment() {
                     mViewCenterX,
                     mViewCenterY
                 )
-                ImageViewUtils.animateTransform(mRootView.iv_origin_image, thumMatix)
+                ImageViewUtils.animateTransform(rootView.iv_origin_image, thumMatix)
 
 
             }

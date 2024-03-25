@@ -19,13 +19,13 @@ class TestGifPlayFragment : BaseFragment() {
 
 
     override fun onInitViews() {
-        mRootView.sb_seekbar1.max = 100
-        mRootView.sb_seekbar1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        rootView.sb_seekbar1.max = 100
+        rootView.sb_seekbar1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
 
 
                 val per = progress.toFloat() / 100
-                mRootView.giv_image.setPercent(per)
+                rootView.giv_image.setPercent(per)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -36,7 +36,7 @@ class TestGifPlayFragment : BaseFragment() {
 
         })
 
-        mRootView.giv_image.setGifResource(R.mipmap.git_0, object : GifImageView.OnPlayListener {
+        rootView.giv_image.setGifResource(R.mipmap.git_0, object : GifImageView.OnPlayListener {
             override fun onPlayRestart() {
                 LogUtils.d("------ onPlayRestart()")
             }
@@ -59,7 +59,7 @@ class TestGifPlayFragment : BaseFragment() {
 
         })
 
-        mRootView.giv_image.pause()
+        rootView.giv_image.pause()
     }
 
 

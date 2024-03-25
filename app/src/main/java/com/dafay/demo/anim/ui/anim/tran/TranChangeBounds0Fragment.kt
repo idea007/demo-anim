@@ -32,7 +32,7 @@ class TranChangeBounds0Fragment : BaseFragment() {
     private fun initView() {
 
 
-        mRootView.btn_click_changebounds.setOnClickListener(View.OnClickListener {
+        rootView.btn_click_changebounds.setOnClickListener(View.OnClickListener {
 
 
             var transitionSet = TransitionSet()
@@ -40,11 +40,11 @@ class TranChangeBounds0Fragment : BaseFragment() {
                     duration = 3000
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
 
-            mRootView.civ_image.rotation = 45f
+            rootView.civ_image.rotation = 45f
             ViewUtils.setMargins(
-                mRootView.civ_image,
+                rootView.civ_image,
                 DpUtils.dp2px(context!!, 100f),
                 DpUtils.dp2px(context!!, 100f),
                 0,
@@ -54,7 +54,7 @@ class TranChangeBounds0Fragment : BaseFragment() {
         })
 
 
-        mRootView.btn_click_changetransform.setOnClickListener(View.OnClickListener {
+        rootView.btn_click_changetransform.setOnClickListener(View.OnClickListener {
 
 
             var transitionSet = TransitionSet()
@@ -62,11 +62,11 @@ class TranChangeBounds0Fragment : BaseFragment() {
                     duration = 3000
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
 
-            mRootView.civ_image.rotation = 45f
+            rootView.civ_image.rotation = 45f
             ViewUtils.setMargins(
-                mRootView.civ_image,
+                rootView.civ_image,
                 DpUtils.dp2px(context!!, 100f),
                 DpUtils.dp2px(context!!, 100f),
                 0,
@@ -75,29 +75,29 @@ class TranChangeBounds0Fragment : BaseFragment() {
 
         })
 
-        mRootView.btn_click_changeclipbounds.setOnClickListener(View.OnClickListener {
+        rootView.btn_click_changeclipbounds.setOnClickListener(View.OnClickListener {
 
 
-            mRootView.civ_image.clipBounds = Rect(0, 0, mRootView.civ_image.width, mRootView.civ_image.height)
+            rootView.civ_image.clipBounds = Rect(0, 0, rootView.civ_image.width, rootView.civ_image.height)
 
             var transitionSet = TransitionSet()
                 .addTransition(ChangeClipBounds().apply {
                     duration = 3000
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
 
-            mRootView.civ_image.clipBounds = Rect(
-                mRootView.civ_image.width / 4,
-                mRootView.civ_image.height / 4,
-                mRootView.civ_image.width * 3 / 4,
-                mRootView.civ_image.height * 3 / 4
+            rootView.civ_image.clipBounds = Rect(
+                rootView.civ_image.width / 4,
+                rootView.civ_image.height / 4,
+                rootView.civ_image.width * 3 / 4,
+                rootView.civ_image.height * 3 / 4
             )
 
 
-            mRootView.civ_image.rotation = 45f
+            rootView.civ_image.rotation = 45f
             ViewUtils.setMargins(
-                mRootView.civ_image,
+                rootView.civ_image,
                 DpUtils.dp2px(context!!, 100f),
                 DpUtils.dp2px(context!!, 100f),
                 0,
@@ -107,7 +107,7 @@ class TranChangeBounds0Fragment : BaseFragment() {
         })
 
 
-        mRootView.btn_click_changeimagetransform.setOnClickListener(View.OnClickListener {
+        rootView.btn_click_changeimagetransform.setOnClickListener(View.OnClickListener {
 
 
             var transitionSet = TransitionSet()
@@ -115,13 +115,13 @@ class TranChangeBounds0Fragment : BaseFragment() {
                     duration = 3000
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
 
-            mRootView.civ_image.scaleType = ImageView.ScaleType.CENTER_INSIDE
+            rootView.civ_image.scaleType = ImageView.ScaleType.CENTER_INSIDE
 
-            mRootView.civ_image.rotation = 45f
+            rootView.civ_image.rotation = 45f
             ViewUtils.setMargins(
-                mRootView.civ_image,
+                rootView.civ_image,
                 DpUtils.dp2px(context!!, 100f),
                 DpUtils.dp2px(context!!, 100f),
                 0,
@@ -130,7 +130,7 @@ class TranChangeBounds0Fragment : BaseFragment() {
 
         })
 
-        mRootView.btn_click_arcmotion.setOnClickListener(View.OnClickListener {
+        rootView.btn_click_arcmotion.setOnClickListener(View.OnClickListener {
 
 
             var transitionSet = TransitionSet()
@@ -143,9 +143,9 @@ class TranChangeBounds0Fragment : BaseFragment() {
                 })
 
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
             ViewUtils.setMargins(
-                mRootView.civ_image,
+                rootView.civ_image,
                 DpUtils.dp2px(context!!, 200f),
                 DpUtils.dp2px(context!!, 20f),
                 0,
@@ -154,10 +154,10 @@ class TranChangeBounds0Fragment : BaseFragment() {
 
         })
 
-        mRootView.btn_click_changescroll.setOnClickListener(View.OnClickListener {
+        rootView.btn_click_changescroll.setOnClickListener(View.OnClickListener {
 
 
-            mRootView.civ_image.scrollY = DpUtils.dp2px(context!!, 0f)
+            rootView.civ_image.scrollY = DpUtils.dp2px(context!!, 0f)
 
             var transitionSet = TransitionSet()
                 .addTransition(ChangeScroll().apply {
@@ -167,8 +167,8 @@ class TranChangeBounds0Fragment : BaseFragment() {
                     }
                 })
 
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, transitionSet)
-            mRootView.civ_image.scrollY = DpUtils.dp2px(context!!, 100f)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, transitionSet)
+            rootView.civ_image.scrollY = DpUtils.dp2px(context!!, 100f)
 
 
         })

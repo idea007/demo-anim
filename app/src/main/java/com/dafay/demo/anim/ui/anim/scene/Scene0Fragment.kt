@@ -36,7 +36,7 @@ class Scene0Fragment : BaseFragment() {
     }
 
     override fun onInitViews() {
-        LogUtils.d("init ${mRootView.rl_container.width} ${mRootView.rl_container.height}")
+        LogUtils.d("init ${rootView.rl_container.width} ${rootView.rl_container.height}")
         initView()
     }
 
@@ -50,21 +50,21 @@ class Scene0Fragment : BaseFragment() {
 
     private fun bindListener() {
 
-        mRootView.btn_start.setOnClickListener(View.OnClickListener {
-            ObjectAnimator.ofFloat(mRootView.tv_title, View.TRANSLATION_X, 0f, 100f).start()
+        rootView.btn_start.setOnClickListener(View.OnClickListener {
+            ObjectAnimator.ofFloat(rootView.tv_title, View.TRANSLATION_X, 0f, 100f).start()
         })
 
 
-        mRootView.btn_start_changebounds.setOnClickListener(View.OnClickListener {
+        rootView.btn_start_changebounds.setOnClickListener(View.OnClickListener {
 
             var changeBounds = ChangeBounds()
             changeBounds.duration = 2000
-            TransitionManager.beginDelayedTransition(mRootView.rl_container, changeBounds)
+            TransitionManager.beginDelayedTransition(rootView.rl_container, changeBounds)
 
-            val params = mRootView.tv_title.getLayoutParams()
+            val params = rootView.tv_title.getLayoutParams()
             params.width *= 2
             params.height *= 2
-            mRootView.tv_title.setLayoutParams(params)
+            rootView.tv_title.setLayoutParams(params)
 
         })
 
@@ -73,32 +73,32 @@ class Scene0Fragment : BaseFragment() {
 
     private fun test() {
 
-        mRootView.rl_container.post(object : Runnable {
+        rootView.rl_container.post(object : Runnable {
             override fun run() {
-                val viewWidth = mRootView.rl_container.width
-                val viewHeight = mRootView.rl_container.height
+                val viewWidth = rootView.rl_container.width
+                val viewHeight = rootView.rl_container.height
 
                 LogUtils.d("post() $viewWidth $viewHeight")
             }
         })
 
-        mRootView.rl_container.postOnAnimation(object : Runnable {
+        rootView.rl_container.postOnAnimation(object : Runnable {
             override fun run() {
 
-                val viewWidth = mRootView.rl_container.width
-                val viewHeight = mRootView.rl_container.height
+                val viewWidth = rootView.rl_container.width
+                val viewHeight = rootView.rl_container.height
 
                 LogUtils.d("postOnAnimation() $viewWidth $viewHeight")
             }
         })
 
-        val observer = mRootView.rl_container.getViewTreeObserver()
+        val observer = rootView.rl_container.getViewTreeObserver()
         observer.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
             override fun onPreDraw(): Boolean {
 
 
-                val viewWidth = mRootView.rl_container.width
-                val viewHeight = mRootView.rl_container.height
+                val viewWidth = rootView.rl_container.width
+                val viewHeight = rootView.rl_container.height
 
                 LogUtils.d("onPreDraw() $viewWidth $viewHeight")
                 return true
@@ -109,8 +109,8 @@ class Scene0Fragment : BaseFragment() {
         observer.addOnDrawListener(object : ViewTreeObserver.OnDrawListener {
             override fun onDraw() {
 
-                val viewWidth = mRootView.rl_container.width
-                val viewHeight = mRootView.rl_container.height
+                val viewWidth = rootView.rl_container.width
+                val viewHeight = rootView.rl_container.height
 
                 LogUtils.d("onDraw() $viewWidth $viewHeight")
             }
@@ -119,8 +119,8 @@ class Scene0Fragment : BaseFragment() {
         observer.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
 
-                val viewWidth = mRootView.rl_container.width
-                val viewHeight = mRootView.rl_container.height
+                val viewWidth = rootView.rl_container.width
+                val viewHeight = rootView.rl_container.height
 
                 LogUtils.d("onGlobalLayout() $viewWidth $viewHeight")
             }

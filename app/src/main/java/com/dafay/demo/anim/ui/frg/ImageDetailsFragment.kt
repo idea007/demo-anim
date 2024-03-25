@@ -57,8 +57,8 @@ class ImageDetailsFragment : BaseFragment() {
     }
 
     fun getShareView(): ImageView? {
-        return if (isViewInBounds(activity?.getWindow()?.decorView!!, mRootView?.iv_image!!)) {
-            mRootView?.iv_image!!
+        return if (isViewInBounds(activity?.getWindow()?.decorView!!, rootView?.iv_image!!)) {
+            rootView?.iv_image!!
         } else null
     }
 
@@ -72,7 +72,7 @@ class ImageDetailsFragment : BaseFragment() {
     }
 
     override fun onInitViews() {
-        mRootView?.iv_image?.transitionName = mImageRes.toString()
+        rootView?.iv_image?.transitionName = mImageRes.toString()
 
         Glide.with(context!!).asBitmap().load(mImageRes)
             .listener(object : RequestListener<Bitmap> {
@@ -93,22 +93,22 @@ class ImageDetailsFragment : BaseFragment() {
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    mRootView.iv_image.setImageBitmap(resource)
+                    rootView.iv_image.setImageBitmap(resource)
                     handleStartPostponedEnterTransition()
                     return true
                 }
 
-            }).into(mRootView.iv_image)
+            }).into(rootView.iv_image)
 
 
     }
 
     private fun handleStartPostponedEnterTransition() {
         if (mCurrentPosition == mStartPosition) {
-            mRootView?.iv_image?.getViewTreeObserver()
+            rootView?.iv_image?.getViewTreeObserver()
                 ?.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
                     override fun onPreDraw(): Boolean {
-                        mRootView?.iv_image?.getViewTreeObserver()?.removeOnPreDrawListener(this)
+                        rootView?.iv_image?.getViewTreeObserver()?.removeOnPreDrawListener(this)
                         activity?.startPostponedEnterTransition()
                         LogUtils.d("------B startPostponedEnterTransition")
                         return true
