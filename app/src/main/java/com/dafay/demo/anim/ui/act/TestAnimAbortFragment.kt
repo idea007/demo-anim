@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.frg_anim_abort.view.*
  * des:
  */
 class TestAnimAbortFragment : BaseFragment() {
-
     override fun getLayoutId(): Int {
         return R.layout.frg_anim_abort
     }
@@ -23,11 +22,9 @@ class TestAnimAbortFragment : BaseFragment() {
         bindListener()
     }
 
-
     private fun bindListener() {
         rootView.tv_text.setOnClickListener {
-
-            var anim = ValueAnimator.ofFloat(0f, 1f)
+            val anim = ValueAnimator.ofFloat(0f, 1f)
             var progress = 0f
             anim.duration = 5000
             anim.interpolator = LinearInterpolator()
@@ -46,8 +43,5 @@ class TestAnimAbortFragment : BaseFragment() {
                 activityOptions.toBundle()
             )
         }
-
     }
-
-
 }
