@@ -13,7 +13,7 @@ import android.util.TypedValue
 import android.view.View
 import androidx.core.app.SharedElementCallback
 import androidx.core.view.ViewCompat
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.anim.custom.TextResize
 import com.dafay.demo.anim.utils.LogUtils
 import com.dafay.demo.lib.base.base.BaseActivity
@@ -31,14 +31,11 @@ class ShareElement0BActivity : BaseActivity() {
         val EXTRA_TEXTCOLOR = "extra_textcolor"
         val EXTRA_TEXT = "extra_text"
         val EXTRA_TEXT_PADDING = "extra_text_padding"
-
     }
-
 
     private var targetTextSize: Float = 0f
     private var targetTextColors: ColorStateList? = null
     private var targetTextPadding: Rect? = null
-
 
     override fun getLayoutId(bundle: Bundle?): Int {
         return R.layout.act_share_element_0_b
@@ -47,8 +44,8 @@ class ShareElement0BActivity : BaseActivity() {
     override fun onInitViews() {
         initView()
         setUpTransition()
+        LogUtils.w("------B onCreate()")
     }
-
 
     private fun initView() {
         tv_text.setTextSize(30f)
@@ -61,17 +58,10 @@ class ShareElement0BActivity : BaseActivity() {
     private fun setUpTransition() {
         ViewCompat.setTransitionName(iv_image, "iv_image")
         ViewCompat.setTransitionName(tv_text, "tv_text")
-
-
         val changeBounds = ChangeBounds()
         val changeImageTransform = ChangeImageTransform()
-        val changeClipBounds = ChangeClipBounds()
-        val changeTransform = ChangeTransform()
-
-
         val textResize = TextResize()
         textResize.addTarget(tv_text)
-
         val transitionSet = TransitionSet()
         transitionSet.addTransition(changeBounds)
         transitionSet.addTransition(changeImageTransform)
@@ -92,7 +82,6 @@ class ShareElement0BActivity : BaseActivity() {
                 for (name in names) {
                     LogUtils.w("------B onMapSharedElements name=$name")
                 }
-
             }
 
             /**
@@ -108,8 +97,8 @@ class ShareElement0BActivity : BaseActivity() {
             }
 
             /**
-             * 在之前的步骤里(onMapSharedElements)被从ShareElements列表里除掉的View会在此回调，
-             * 不处理的话默认进行alpha动画消失
+             * 在之前的步骤里 (onMapSharedElements) 被从 ShareElements 列表里除掉的 View 会在此回调，
+             * 不处理的话默认进行 alpha 动画消失
              */
             override fun onRejectSharedElements(rejectedSharedElements: MutableList<View>?) {
                 super.onRejectSharedElements(rejectedSharedElements)
@@ -117,8 +106,8 @@ class ShareElement0BActivity : BaseActivity() {
             }
 
             /**
-             *在这里会把ShareElement里值得记录的信息存到为Parcelable格式，以发送到Activity B
-             *默认处理规则是ImageView会特殊记录Bitmap、ScaleType、Matrix，其它View只记录大小和位置
+             *在这里会把 ShareElement 里值得记录的信息存到为 Parcelable 格式，以发送到Activity B
+             *默认处理规则是 ImageView 会特殊记录 Bitmap、ScaleType、Matrix，其它View只记录大小和位置
              */
             override fun onCaptureSharedElementSnapshot(
                 sharedElement: View?,
@@ -133,12 +122,12 @@ class ShareElement0BActivity : BaseActivity() {
             }
 
             /**
-             *在这里会把Activity A传过来的Parcelable数据，重新生成一个View，这个View的大小和位置会与Activity A里的
-             *ShareElement一致，
+             *在这里会把 Activity A 传过来的 Parcelable 数据，重新生成一个View，这个 View 的大小和位置会与 Activity A 里的
+             *ShareElement 一致，
              */
             override fun onCreateSnapshotView(context: Context?, snapshot: Parcelable?): View {
-                return super.onCreateSnapshotView(context, snapshot)
                 LogUtils.d("------B onCreateSnapshotView")
+                return super.onCreateSnapshotView(context, snapshot)
             }
 
 
@@ -194,6 +183,21 @@ class ShareElement0BActivity : BaseActivity() {
         )
         view.measure(widthSpec, heightSpec)
         view.layout(view.left, view.top, view.right, view.bottom)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        LogUtils.w("------B onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        LogUtils.w("------B onPause()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        LogUtils.w("------B onDestroy()")
     }
 
 }

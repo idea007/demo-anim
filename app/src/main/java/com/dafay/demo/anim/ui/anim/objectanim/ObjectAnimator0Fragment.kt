@@ -16,7 +16,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.LogUtils
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.frg_object_animator_0.view.*
 

@@ -10,7 +10,7 @@ import android.util.TypedValue
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.core.app.SharedElementCallback
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.anim.custom.ChangeTextTransition
 import com.dafay.demo.anim.ui.anim.custom.TextResize
 import com.dafay.demo.anim.utils.LogUtils

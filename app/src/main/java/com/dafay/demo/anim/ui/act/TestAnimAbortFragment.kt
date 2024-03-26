@@ -4,7 +4,7 @@ import android.animation.ValueAnimator
 import android.content.Intent
 import android.view.animation.LinearInterpolator
 import androidx.core.app.ActivityOptionsCompat
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.LogUtils
 import kotlinx.android.synthetic.main.frg_anim_abort.view.*

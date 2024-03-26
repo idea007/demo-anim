@@ -6,7 +6,7 @@ import android.transition.*
 import android.view.View
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.ViewUtils
 import com.idea.library.richeditor.utils.DpUtils

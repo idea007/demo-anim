@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 import android.view.View.OnClickListener
 import android.widget.RelativeLayout
 import android.widget.TextView
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.idea.library.richeditor.utils.DpUtils
 
 /**

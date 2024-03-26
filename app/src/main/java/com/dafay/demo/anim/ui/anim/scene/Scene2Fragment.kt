@@ -5,7 +5,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.frg_scene_2.view.*
@@ -20,13 +20,10 @@ class Scene2Fragment : BaseFragment() {
     }
 
     override fun onInitViews() {
-
         initView()
-
     }
 
     private fun initView() {
-
         rootView.ll_button_container?.addView(createButton("点击隐藏条目二") {
             TransitionManager.beginDelayedTransition(rootView.ll_container)
             rootView.v_1.visibility = View.GONE

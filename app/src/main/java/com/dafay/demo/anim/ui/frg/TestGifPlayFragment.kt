@@ -1,7 +1,7 @@
 package com.dafay.demo.anim.ui.frg
 
 import android.widget.SeekBar
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.weight.gif.GifImageView
 import com.dafay.demo.anim.utils.LogUtils
 import kotlinx.android.synthetic.main.frg_test_gif_play.view.*

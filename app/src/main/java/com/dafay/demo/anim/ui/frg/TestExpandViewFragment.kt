@@ -4,7 +4,7 @@ import android.transition.ChangeBounds
 import android.transition.TransitionManager
 import android.transition.TransitionSet
 import android.view.ViewGroup
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import kotlinx.android.synthetic.main.frg_test_expand_view.view.*
 
 /**

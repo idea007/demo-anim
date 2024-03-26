@@ -5,7 +5,7 @@ import android.widget.SeekBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.data.ResScouce
 import com.dafay.demo.anim.ui.adapter.FlingTestAdapter
 import com.dafay.demo.anim.ui.frg.BaseFragment

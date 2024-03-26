@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 abstract class BaseFragment : Fragment() {
-    lateinit var rootView: View
+    protected lateinit var rootView: View
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         rootView = inflater.inflate(getLayoutId(), null)
         return rootView

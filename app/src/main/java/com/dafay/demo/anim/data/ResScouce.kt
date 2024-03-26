@@ -1,7 +1,7 @@
 package com.dafay.demo.anim.data
 
 import androidx.annotation.DrawableRes
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 
 /**
  * Created by  idea on 2019-12-20$ 15:52$

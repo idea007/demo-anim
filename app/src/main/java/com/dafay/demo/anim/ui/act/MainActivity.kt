@@ -4,7 +4,7 @@ import android.animation.ValueAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.Choreographer
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.anim.motion.Motion0Fragment
 import com.dafay.demo.anim.ui.anim.motion.Motion1Fragment
 import com.dafay.demo.anim.ui.anim.motion.Motion2Fragment
@@ -87,7 +87,6 @@ class MainActivity : BaseActivity() {
         })
 
         expandableDirLayout3.addChildView("Transition:", "Transition 常用子类", {
-
             HostActivity.startActivity(
                 this,
                 TranChangeBounds0Fragment()

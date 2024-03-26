@@ -7,7 +7,7 @@ import android.transition.TransitionSet
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.idea.library.richeditor.utils.DpUtils
 import kotlinx.android.synthetic.main.frg_scene_3.view.*

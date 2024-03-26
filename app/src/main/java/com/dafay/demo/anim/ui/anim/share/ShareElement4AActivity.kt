@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.gifdecoder.GifDecoder
 import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.target.CustomViewTarget
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.data.ResScouce
 import com.dafay.demo.anim.ui.adapter.GifAdapter
 import com.dafay.demo.anim.ui.weight.recyclerview.itemdecoration.MediaGridInset

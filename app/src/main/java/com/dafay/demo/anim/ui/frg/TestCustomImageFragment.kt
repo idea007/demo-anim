@@ -2,7 +2,7 @@ package com.dafay.demo.anim.ui.frg
 
 import android.graphics.*
 import android.os.Build
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.weight.RoundDrawable
 import kotlinx.android.synthetic.main.frg_test_custom_image.view.*
 

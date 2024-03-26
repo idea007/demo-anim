@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.lib.base.base.BaseActivity
 import kotlinx.android.synthetic.main.act_share_element_2_a.*
 import java.util.*

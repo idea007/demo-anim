@@ -8,7 +8,7 @@ import android.graphics.RectF
 import android.os.Bundle
 import android.os.Parcelable
 import android.view.View
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.adapter.ImagePagerAdapter
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.ui.frg.ImageDetailsFragment

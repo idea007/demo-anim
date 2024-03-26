@@ -1,12 +1,16 @@
 package com.dafay.demo.anim.ui.anim.valueanim
 
 import android.animation.ValueAnimator
+import android.os.Handler
+import android.os.Looper
 import android.view.Choreographer
-import android.view.View
-import com.idea.android.animandtran.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.LogUtils
-import kotlinx.android.synthetic.main.frg_value_animator_2.view.*
+import com.dafay.demo.anim.R
+import kotlinx.android.synthetic.main.frg_value_animator_2.view.btn_custom_anim
+import kotlinx.android.synthetic.main.frg_value_animator_2.view.btn_valueanim
+import kotlinx.android.synthetic.main.frg_value_animator_2.view.v_0
+import kotlinx.android.synthetic.main.frg_value_animator_2.view.v_1
 
 
 /**
@@ -15,66 +19,55 @@ import kotlinx.android.synthetic.main.frg_value_animator_2.view.*
  */
 class ValueAnimator2Fragment : BaseFragment() {
 
-    private val DURATION_TIME: Long = 5000
+    private val DURATION_TIME: Long = 2000
     private val DEFAULT_DISTANCE = 500
+    private val mainHandler = Handler(Looper.getMainLooper())
+    private var startTime: Long = 0
+
+    // [0,1]
+    private var currentProgress = 0f
 
     override fun getLayoutId(): Int {
-        return R.layout.frg_value_animator_1
+        return R.layout.frg_value_animator_2
     }
 
     override fun onInitViews() {
-        bindListener()
-    }
-
-    private fun bindListener() {
-
-        rootView.btn_valueanimator.setOnClickListener({
-
-            var valueAnim = ValueAnimator.ofFloat(0f, 1f)
+        rootView.btn_valueanim.setOnClickListener {
+            val valueAnim = ValueAnimator.ofFloat(0f, 1f)
             valueAnim.duration = DURATION_TIME
-            valueAnim.start()
             valueAnim.addUpdateListener(object : ValueAnimator.AnimatorUpdateListener {
                 override fun onAnimationUpdate(animation: ValueAnimator) {
-                    var progress = animation.animatedValue as Float
-                    if (progress == 0f) {
-                        LogUtils.d("------ addUpdateListener progress=$progress")
-                    }
-                    rootView?.v_0.translationX = progress * DEFAULT_DISTANCE
+                    val progress = animation.animatedValue as Float
+                    rootView.v_0.translationX = progress * DEFAULT_DISTANCE
                 }
             })
+            valueAnim.start()
+            mainHandler.postDelayed({ blockByCalculate() }, 1000)
+        }
 
-            blockByCalculate()
-        })
-
-
-        rootView.btn_custom_anim.setOnClickListener(View.OnClickListener {
-            var choreographer = Choreographer.getInstance()
+        rootView.btn_custom_anim.setOnClickListener {
             startTime = 0
+            val choreographer = Choreographer.getInstance()
             postNextFrame(choreographer)
-            blockByCalculate()
-        })
+            mainHandler.postDelayed({ blockByCalculate() }, 1000)
+        }
     }
 
-
-    var startTime: Long = 0
-    var currentProgress = 0f // 0~1
     private fun postNextFrame(choreographer: Choreographer) {
         choreographer.postFrameCallback {
-            if (startTime == 0L) {
+            if (startTime <= 0L) {
                 startTime = System.currentTimeMillis()
                 currentProgress = 0f
             } else {
-                currentProgress =
-                    (System.currentTimeMillis() - startTime) / DURATION_TIME.toFloat()
+                currentProgress = (System.currentTimeMillis() - startTime) / DURATION_TIME.toFloat()
             }
-
             if (currentProgress > 1) {
                 currentProgress = 1f
-                rootView?.v_1.translationX = currentProgress * DEFAULT_DISTANCE
-            } else {
-                rootView?.v_1.translationX = currentProgress * DEFAULT_DISTANCE
-                postNextFrame(choreographer)
+                rootView.v_1.translationX = currentProgress * DEFAULT_DISTANCE
+                return@postFrameCallback
             }
+            rootView.v_1.translationX = currentProgress * DEFAULT_DISTANCE
+            postNextFrame(choreographer)
         }
     }
 
@@ -83,10 +76,8 @@ class ValueAnimator2Fragment : BaseFragment() {
      */
     fun blockByCalculate() {
         var preTime = System.currentTimeMillis()
-        for (i in 0..38) {
-            fib(i)
-        }
-        LogUtils.d("------ calculate durationTime=" + (System.currentTimeMillis() - preTime))
+        fib(38)
+        LogUtils.d("calculate durationTime=" + (System.currentTimeMillis() - preTime))
     }
 
     fun fib(n: Int): Int {

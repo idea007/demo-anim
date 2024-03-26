@@ -7,7 +7,7 @@ import android.transition.ChangeBounds
 import android.transition.TransitionManager
 import android.view.View
 import android.view.ViewTreeObserver
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import com.dafay.demo.anim.utils.LogUtils
 import kotlinx.android.synthetic.main.frg_scene_0.view.*
@@ -28,7 +28,6 @@ class Scene0Fragment : BaseFragment() {
                 LogUtils.d("handler post")
             }
         })
-
     }
 
     override fun getLayoutId(): Int {
@@ -42,52 +41,39 @@ class Scene0Fragment : BaseFragment() {
 
 
     private fun initView() {
-
         test()
         bindListener()
-
     }
 
     private fun bindListener() {
-
         rootView.btn_start.setOnClickListener(View.OnClickListener {
             ObjectAnimator.ofFloat(rootView.tv_title, View.TRANSLATION_X, 0f, 100f).start()
         })
 
-
         rootView.btn_start_changebounds.setOnClickListener(View.OnClickListener {
-
             var changeBounds = ChangeBounds()
             changeBounds.duration = 2000
             TransitionManager.beginDelayedTransition(rootView.rl_container, changeBounds)
-
             val params = rootView.tv_title.getLayoutParams()
             params.width *= 2
             params.height *= 2
             rootView.tv_title.setLayoutParams(params)
-
         })
-
-
     }
 
     private fun test() {
-
         rootView.rl_container.post(object : Runnable {
             override fun run() {
                 val viewWidth = rootView.rl_container.width
                 val viewHeight = rootView.rl_container.height
-
                 LogUtils.d("post() $viewWidth $viewHeight")
             }
         })
 
         rootView.rl_container.postOnAnimation(object : Runnable {
             override fun run() {
-
                 val viewWidth = rootView.rl_container.width
                 val viewHeight = rootView.rl_container.height
-
                 LogUtils.d("postOnAnimation() $viewWidth $viewHeight")
             }
         })
@@ -95,38 +81,27 @@ class Scene0Fragment : BaseFragment() {
         val observer = rootView.rl_container.getViewTreeObserver()
         observer.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
             override fun onPreDraw(): Boolean {
-
-
                 val viewWidth = rootView.rl_container.width
                 val viewHeight = rootView.rl_container.height
-
                 LogUtils.d("onPreDraw() $viewWidth $viewHeight")
                 return true
             }
-
         })
 
         observer.addOnDrawListener(object : ViewTreeObserver.OnDrawListener {
             override fun onDraw() {
-
                 val viewWidth = rootView.rl_container.width
                 val viewHeight = rootView.rl_container.height
-
                 LogUtils.d("onDraw() $viewWidth $viewHeight")
             }
         })
 
         observer.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
-
                 val viewWidth = rootView.rl_container.width
                 val viewHeight = rootView.rl_container.height
-
                 LogUtils.d("onGlobalLayout() $viewWidth $viewHeight")
             }
         })
-
     }
-
-
 }

@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.lib.base.base.BaseActivity
 
 /**

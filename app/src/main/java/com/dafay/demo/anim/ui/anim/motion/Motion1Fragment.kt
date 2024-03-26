@@ -1,6 +1,6 @@
 package com.dafay.demo.anim.ui.anim.motion
 
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 
 /**

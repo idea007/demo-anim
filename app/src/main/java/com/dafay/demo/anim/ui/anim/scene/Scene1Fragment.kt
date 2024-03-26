@@ -3,7 +3,7 @@ package com.dafay.demo.anim.ui.anim.scene
 import android.transition.*
 import android.view.ViewGroup
 import android.widget.RadioGroup
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import kotlinx.android.synthetic.main.frg_scene_1.view.*
 
@@ -14,9 +14,9 @@ import kotlinx.android.synthetic.main.frg_scene_1.view.*
  */
 class Scene1Fragment : BaseFragment() {
 
-    private lateinit var mScene1: Scene
-    private lateinit var mScene2: Scene
-    private lateinit var mScene3: Scene
+    private lateinit var scene1: Scene
+    private lateinit var scene2: Scene
+    private lateinit var scene3: Scene
 
     override fun getLayoutId(): Int {
         return R.layout.frg_scene_1
@@ -30,16 +30,16 @@ class Scene1Fragment : BaseFragment() {
 
     private fun initView() {
         // 不能被复用
-        mScene1 = Scene(
+        scene1 = Scene(
             rootView.rl_root_scene,
             rootView.rl_root_scene.findViewById(R.id.rl_container) as ViewGroup
         )
-        mScene2 = Scene.getSceneForLayout(
+        scene2 = Scene.getSceneForLayout(
             rootView.rl_root_scene,
             R.layout.layout_section_scene_2,
             context
         )
-        mScene3 = Scene.getSceneForLayout(
+        scene3 = Scene.getSceneForLayout(
             rootView.rl_root_scene,
             R.layout.layout_section_scene_3,
             context
@@ -53,37 +53,24 @@ class Scene1Fragment : BaseFragment() {
             override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
                 when (checkedId) {
                     R.id.select_scene_1 -> {
-                        TransitionManager.go(mScene1)
+                        TransitionManager.go(scene1)
                     }
 
                     R.id.select_scene_2 -> {
-
                         var transition = TransitionSet()
-                            .addTransition(ChangeBounds().apply {
-                                //                                addTarget(R.id.transition_oval)
-                            })
-                            .addTransition(Fade(Fade.IN).apply {
-                                //                                addTarget(R.id.transition_oval)
-                            })
-                            .addTransition(Fade(Fade.OUT).apply {
-                                //                                addTarget(R.id.transition_oval)
-                            })
-
-
+                            .addTransition(ChangeBounds())
+                            .addTransition(Fade(Fade.IN))
+                            .addTransition(Fade(Fade.OUT))
                         transition.excludeTarget(R.id.transition_oval, true)
-
-                        TransitionManager.go(mScene2, transition)
+                        TransitionManager.go(scene2, transition)
                     }
 
                     R.id.select_scene_3 -> {
-                        TransitionManager.go(mScene3)
+                        TransitionManager.go(scene3)
                     }
                 }
             }
-
         })
-
-
     }
 
 

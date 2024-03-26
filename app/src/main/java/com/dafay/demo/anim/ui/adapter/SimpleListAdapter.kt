@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 
 class SimpleListAdapter : RecyclerView.Adapter<SimpleListAdapter.ViewHolder>() {
 

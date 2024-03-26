@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import com.idea.android.animandtran.R;
+import com.dafay.demo.anim.R;
 import com.dafay.demo.anim.data.Node;
 import com.mikepenz.iconics.IconicsColor;
 import com.mikepenz.iconics.IconicsDrawable;

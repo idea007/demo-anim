@@ -1,7 +1,7 @@
 package com.dafay.demo.anim.ui.anim.motion
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.adapter.SimpleListAdapter
 import com.dafay.demo.anim.ui.frg.BaseFragment
 import kotlinx.android.synthetic.main.frg_motion_2_a.view.*

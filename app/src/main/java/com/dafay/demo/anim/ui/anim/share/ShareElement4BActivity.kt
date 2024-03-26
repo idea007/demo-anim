@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat
 import com.bumptech.glide.gifdecoder.GifDecoder
 import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.target.CustomViewTarget
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.utils.LogUtils
 import com.dafay.demo.anim.utils.ObjectUtils
 import com.dafay.demo.lib.base.base.BaseActivity

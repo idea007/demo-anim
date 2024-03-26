@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.FrameLayout
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.ui.weight.GravityArcMotion
 import com.dafay.demo.anim.ui.weight.RoundImageView
 import com.dafay.demo.anim.utils.ViewUtils

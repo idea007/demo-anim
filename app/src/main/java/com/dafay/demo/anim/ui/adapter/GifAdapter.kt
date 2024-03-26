@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.dafay.demo.lib.base.adapter.BaseAdapter
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import kotlinx.android.synthetic.main.item_gif.view.*
 
 /**

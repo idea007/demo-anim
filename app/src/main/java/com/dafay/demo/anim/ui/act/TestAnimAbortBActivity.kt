@@ -3,7 +3,7 @@ package com.dafay.demo.anim.ui.act
 import android.os.Bundle
 import android.transition.Fade
 import android.transition.TransitionSet
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.lib.base.base.BaseActivity
 
 /**

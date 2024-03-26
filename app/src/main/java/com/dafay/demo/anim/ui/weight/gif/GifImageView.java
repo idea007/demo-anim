@@ -13,7 +13,7 @@ import android.view.View;
 import androidx.annotation.FloatRange;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.idea.android.animandtran.R;
+import com.dafay.demo.anim.R;
 
 import java.math.BigDecimal;
 

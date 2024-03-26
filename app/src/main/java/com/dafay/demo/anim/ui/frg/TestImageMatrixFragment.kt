@@ -3,7 +3,7 @@ package com.dafay.demo.anim.ui.frg
 import android.graphics.Matrix
 import android.widget.ImageView
 import android.widget.SeekBar
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.utils.ImageViewUtils
 import com.dafay.demo.anim.utils.MatrixUtils
 import kotlinx.android.synthetic.main.frg_test_image_matrix.view.*

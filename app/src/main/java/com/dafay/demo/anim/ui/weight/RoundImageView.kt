@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewOutlineProvider
 import androidx.appcompat.widget.AppCompatImageView
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 
 /**
  * Created by  idea on 2020/5/15$ 下午2:14$

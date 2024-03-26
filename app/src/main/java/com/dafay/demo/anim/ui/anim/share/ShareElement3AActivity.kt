@@ -12,7 +12,7 @@ import androidx.core.app.SharedElementCallback
 import androidx.core.util.Pair
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import com.dafay.demo.anim.data.ResScouce
 import com.dafay.demo.anim.ui.adapter.Grid2Adapter
 import com.dafay.demo.anim.ui.weight.recyclerview.itemdecoration.MediaGridInset

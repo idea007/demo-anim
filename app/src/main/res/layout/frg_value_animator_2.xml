@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.dafay.demo.anim.ui.act.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dafay.demo.anim.ui.act.MainActivity">
 
 
     <View
-            android:id="@+id/v_0"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:background="#E012CD" />
+        android:id="@+id/v_0"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#E012CD" />
 
-    <TextView
-            android:id="@+id/btn_valueanimator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="100dp"
-            android:padding="5dp"
-            android:text="ValueAnimator"
-            android:textColor="@color/black" />
+    <Button
+        android:id="@+id/btn_valueanim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:text="属性动画 卡顿测试"
+        android:textColor="@color/black" />
 
 
     <View
-            android:id="@+id/v_1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="150dp"
-            android:background="#E012CD" />
+        android:id="@+id/v_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="150dp"
+        android:background="#a0ff1D" />
 
-    <TextView
-            android:id="@+id/btn_custom_anim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="240dp"
-            android:background="@color/black5"
-            android:padding="5dp"
-            android:text="postNextFrame"
-            android:textColor="@color/black" />
+    <Button
+        android:id="@+id/btn_custom_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/black5"
+        android:text="自定义动画 卡顿测试"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>

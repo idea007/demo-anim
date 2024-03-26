@@ -4,7 +4,7 @@ import android.animation.FloatEvaluator
 import android.animation.ValueAnimator
 import android.view.animation.LinearInterpolator
 import com.dafay.demo.anim.ui.frg.BaseFragment
-import com.idea.android.animandtran.R
+import com.dafay.demo.anim.R
 import kotlinx.android.synthetic.main.frg_value_animator_1.view.btn_click
 import kotlinx.android.synthetic.main.frg_value_animator_1.view.v_0
 
