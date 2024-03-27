@@ -130,14 +130,20 @@ class ShareElement0BActivity : BaseActivity() {
                 return super.onCreateSnapshotView(context, snapshot)
             }
 
-
+            /**
+             * 共享元素过渡开始时被调用。您可以在这个方法中执行一些准备工作，比如隐藏或调整视图元素的属性，以便在过渡期间产生更好的动画效果。
+             * 这个方法通常用于在过渡开始时执行一些动画或视图操作。
+             * @param sharedElementNames
+             * @param sharedElements
+             * @param sharedElementSnapshots
+             */
             override fun onSharedElementStart(
                 sharedElementNames: MutableList<String>?,
                 sharedElements: MutableList<View>?,
                 sharedElementSnapshots: MutableList<View>?
             ) {
                 LogUtils.d("------B onSharedElementStart")
-
+                // 目标值，即是过渡动画 endScene 的值
                 targetTextSize = tv_text.textSize
                 targetTextColors = tv_text.textColors
                 targetTextPadding = Rect(
@@ -146,7 +152,7 @@ class ShareElement0BActivity : BaseActivity() {
                     tv_text.getPaddingRight(),
                     tv_text.getPaddingBottom()
                 )
-
+                // 设置起始值，startScene
                 tv_text.setTextColor(intent.getIntExtra(EXTRA_TEXTCOLOR, Color.BLACK))
                 var textSize = intent.getFloatExtra(EXTRA_TEXTSIZE, targetTextSize)
                 tv_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
@@ -154,6 +160,13 @@ class ShareElement0BActivity : BaseActivity() {
                 tv_text.setPadding(padding!!.left, padding.top, padding.right, padding.bottom)
             }
 
+            /**
+             * 方法在共享元素过渡结束时被调用。您可以在这个方法中执行一些清理工作，比如恢复视图元素的原始属性或状态。
+             * 这个方法通常用于在过渡结束时执行一些清理操作。
+             * @param sharedElementNames
+             * @param sharedElements
+             * @param sharedElementSnapshots
+             */
             override fun onSharedElementEnd(
                 sharedElementNames: MutableList<String>?,
                 sharedElements: MutableList<View>?,

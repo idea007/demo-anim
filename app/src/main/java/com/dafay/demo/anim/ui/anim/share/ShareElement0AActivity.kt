@@ -34,7 +34,6 @@ class ShareElement0AActivity : BaseActivity() {
     }
 
     private fun setUpTransition() {
-
         setExitSharedElementCallback(
             object : SharedElementCallback() {
                 /**
@@ -86,11 +85,9 @@ class ShareElement0AActivity : BaseActivity() {
     }
 
     private fun bindListener() {
-
         btn_click.setOnClickListener(View.OnClickListener {
             toActivityB()
         })
-
         sb_seekbar1.max = 200
         sb_seekbar1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
